@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Navigate Vivid</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  
+
+</head>
+<body style="background: black">
+
+<div class="container" id="navigate-vivid" >
+    <div id="vivid-navigate" class="carousel slide carousel-fade" data-interval="false">
+  
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+              <video id="1" autoplay>
+                  <source src="./Assets/Panel 1.mp4" type="video/mp4">
+                  Your browser does not support HTML5 video.
+              </video>
+          </div>
+          <div class="carousel-item" >
+                  <video class="cursor-pointer" id="2" onclick="Next()">
+                      <source src="./Assets/2.mp4" type="video/mp4">
+                      Your browser does not support HTML5 video.
+                  </video>
+              
+          </div>
+          <div class="carousel-item">
+              <video class="cursor-pointer" id="3" onclick="Next()" >
+                  <source src="./Assets/Page Cues 3b.mp4" type="video/mp4">
+                  Your browser does not support HTML5 video.
+              </video>
+          </div>
+          <div class="carousel-item">
+              <video class="cursor-pointer" id="4" onclick="goHome()">
+                  <source src="./Assets/Home - Scroll.mp4" type="video/mp4">
+                  Your browser does not support HTML5 video.
+              </video>
+          </div>
+        </div>
+        
+        <!-- Left and right controls -->
+        <a class="carousel-control-next" href="#vivid-navigate" data-slide="next" onclick="videoPlay()"></a>
+      </div>
+      
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+    let vidId = 2;
+    function videoPlay(){
+        $("#" + vidId).trigger('play');
+        console.log(vidId);
+        vidId++;
+    }
+
+    function goHome(){
+        window.location.replace("home.html");
+    }
+
+    function Next(){
+        console.log("fd");
+        $('.carousel').carousel("next");
+        videoPlay();
+    }
+
+</script>
+
+</body>
+</html>
