@@ -14,9 +14,8 @@
 </head>
 <body>
     <div class="home container d-flex flex-column justify-content-center align-items-center p-0">
-
+       
         <div class="landing-page w-100">
-
             <!--Navbar-->
             <div class="navbar w-100 mb-5 d-flex justify-content-around align-items-center">
                 <div class="brand d-flex justify-content-center align-items-center">
@@ -24,65 +23,158 @@
                 </div>
                 <div class="links d-flex justify-content-center align-items-center">
                     <a class="nav-link" href="">Home</a>
-                    <a class="nav-link" href="">Features</a>
-                    <a class="nav-link" href="">Vivid</a>
+                    <a class="nav-link" href="#start-cue" onclick="feature()">Features</a>
+                    <a class="nav-link" href="#" onclick="menu()">Vivid</a>
                     
                 </div>
             </div>
 
-            <!--Main-->
-            <div class="main d-flex justify-content-between align-items-center">
-                <div class="title d-flex flex-column justify-content-between align-items-start text-white align-self-end align-self-md-center" >
-
-                    <!--Exapnded Comics-->
-
-                    <!-- <div class="circle d-flex justify-content-center align-items-center">
-                        <p class="mb-0 mt-5 text-white">Expanded Comics</p>
-                    </div> -->
-
-                    <div class="wrapper m-4 m-md-5">
-                        <h1 class="text-white display-1 text-nowrap">VIVID</h1>
-                        <p>A hybird form of animations and comics</p>
+            <div class="menu border border-light m-3 p-3">
+                <img src="./Assets/hamburger.png" alt="" id="menu" width="100px">
+                <div class="row">
+                    <div class="col-6 my-3 d-flex justify-content-center align-items-center">
+                        <div class="option text-white">
+                            <div class="page-number d-flex">
+                                <h1>01 </h1>
+                                <p>Page</p>
+                            </div>
+                            
+                            <img src="./Assets/Page1_q.png" alt="" width="200px">
+                        </div>
+                    </div>
+                    <div class="col-6 my-3 d-flex justify-content-center align-items-center">
+                        <div class="option text-white">
+                            <div class="page-number d-flex">
+                                <h1>02 </h1>
+                                <p>Page</p>
+                            </div>
+                            <img src="./Assets/Page2_o.png" alt="" width="200px">
+                        </div>
+                    </div>
+                    <div class="col-6 my-3 d-flex justify-content-center align-items-center">
+                        <div class="option text-white">
+                            <div class="page-number d-flex">
+                                <h1>03 </h1>
+                                <p>Page</p>
+                            </div>
+                            <img src="./Assets/Page3_p.png " alt="" width="200px">
+                        </div>
+                    </div>
+                    <div class="col-6 my-3 d-flex justify-content-center align-items-center">
+                        <div class="option text-white">
+                            <div class="page-number d-flex">
+                                <h1>04 </h1>
+                                <p>Page</p>
+                            </div>
+                            <img src="./Assets/Page4_q.png" alt="" width="200px">
+                        </div>
+                    </div>
+                    <div class="col-6 my-3 d-flex justify-content-center align-items-center">
+                        <div class="option text-white">
+                            <div class="page-number d-flex">
+                                <h1>05 </h1>
+                                <p>Page</p>
+                            </div>
+                            <img src="./Assets/Page5_r.png" alt="" width="200px">
+                        </div>
+                    </div>
+                    <div class="col-6 my-3 d-flex justify-content-center align-items-center">
+                        <div class="option text-white">
+                            <div class="page-number d-flex">
+                                <h1>06</h1>
+                                <p>Page</p>
+                            </div>
+                            <img src="./Assets/Page6_s.png" alt="" width="200px">
+                        </div>
+                    </div>
+                    <div class="col-3 d-flex justify-content-center align-items-center" >
+                        <div class="circle d-flex justify-content-center align-items-center">
+                            <span class="mb-0 text-white" style="margin-left: 70px">Enjoy!</span>
+                        </div>
+                    </div>
+                    <div class="col-6 my-3 d-flex justify-content-center align-items-center">
+                        <div class="option text-white">
+                            <div class="page-number d-flex">
+                                <h1>07</h1>
+                                <p>Page</p>
+                            </div>
+                            <img src="./Assets/Page7_w.png" alt="" width="200px">
+                        </div>
+                    </div>
+                    <div class="col-3 d-flex justify-content-center align-items-center" >
+                        <div class="circle d-flex justify-content-center align-items-center">
+                            <p class="mb-0 mt-5 text-white">Expanded Comics</p>
+                        </div>
                     </div>
                     
                 </div>
             </div>
 
+            <!--Main-->
+            <div class="container-fluid" id="main">
+                <div class="main d-flex justify-content-between align-items-center" >
+                    <div class="title d-flex flex-column justify-content-between align-items-start text-white align-self-end align-self-md-center" >
+    
+                        <!--Exapnded Comics-->
+    
+                        <!-- <div class="circle d-flex justify-content-center align-items-center">
+                            <p class="mb-0 mt-5 text-white">Expanded Comics</p>
+                        </div> -->
+    
+                        <div class="wrapper m-4 m-md-5">
+                            <h1 class="text-white display-1 text-nowrap">VIVID</h1>
+                            <p>A hybird form of animations and comics</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+
 
         </div>
 
         
 
-        <!--Cover-->
-
-        <div class="panel my-5 panel-watch">
-            <div class="wrapper m-4">
-                <h3>01</h3>
-                <h3>Watch</h3>  
-                <p>How to navigate through vivid</p>
+        <div class="container-fluid" id="content">
+            <div class="wrapper d-flex justify-content-center align-items-center flex-column">
+                
+                <!--Cover-->
+    
+                <div class="panel my-5 panel-watch d-flex">
+                    <div class="wrapper m-4">
+                        <h3>01</h3>
+                        <h3>Watch</h3>  
+                        <p>How to navigate through vivid</p>
+                    </div>
+                    <a href="#start-cue"> <img src="./Assets/Play.png" alt="" width="100px"> </a>
+                </div>
+    
+                <div class="panel my-5 d-flex justify-content-start align-items-center panel-navigate w-100">
+                    <div class="wrapper m-5 text-white">
+                    <h1>HOW TO</h1>
+                    <p>Navigate through vivid expanded comics</p>
+                    </div>
+                </div>
+    
+    
+    
+                
+    
             </div>
-            <img src="./Assets/Play.png" alt="" width="100px">
         </div>
 
-        <div class="panel my-5 d-flex justify-content-start align-items-center panel-navigate w-100">
-            <div class="wrapper m-5 text-white">
-               <h1>HOW TO</h1>
-               <p>Navigate through vivid expanded comics</p>
-            </div>
-        </div>
-
-
-        
         <!--  Start Cue   -->
-        <div class="vid-container">
+        <div class="vid-container" id="start-cue">
             <video class="start-cue cursor-pointer">
                 <source src="Assets/1 Start_Visual Cues.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
             </video>
         </div>
-        
-    </div>
+        <span  id="start-cue"></span>
 
+
+       
 
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -100,6 +192,24 @@
                 window.location.replace("navigate-vivid.html");
             }
         });
+
+
+        $(".menu").hide();
+
+
+        function menu(){
+            $("#content").hide();
+            $("#main").hide();
+            $("#start-cue").hide();
+            $(".menu").show();
+
+
+        }
+
+        function feature(){
+            $(".menu").hide();
+            $("#start-cue").show();
+        }
     </script>
 
 

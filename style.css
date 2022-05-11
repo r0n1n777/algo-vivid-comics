@@ -7,11 +7,11 @@
 
 body{
     font-family: 'NothingYouCouldDo' !important;
+    scroll-behavior: smooth;
 }
 
 .home{
     background: black;
-    width: 50vw !important;
 }
 
 .home .landing-page{
@@ -54,7 +54,7 @@ body{
     width: 85px;
     height: 85px;
     /* UI Properties */
-    border: 2px solid #FFAC06;
+    border: 2px solid rgba(255,172,6,.5);
     border-radius: 100%;
 }
 
@@ -64,6 +64,7 @@ body{
     text-align: left;
     font: normal normal medium 20px/15px Sinkin Sans 500;
     letter-spacing: 0px;
+    opacity: 1 !important;
 }
 
 .title{
@@ -144,12 +145,40 @@ video{
     width: 80%;
 }
 
+.menu{
+    border-radius: 20px;
+    position: relative;
+    background: black;
+}
+#menu{
+    position: absolute;
+    left: 0px;
+    top: -40px;
+}
+
+.page-number{
+    position: relative;
+}
+
+.menu .option .page-number p{
+    top: 10px;
+    left: 50px;
+    transform: matrix(0, -1, 1, 0, 0, 0);
+    text-align: left;
+    font: normal normal 300 13px/80px Sinkin Sans 300;
+    letter-spacing: 1.95px;
+    color: #FFFFFF;
+    opacity: 1;
+    font-size: 9px;
+    margin-left: 10px;
+
+}
+
+
+
 
 
 @media only screen and (max-width: 768px) {
-    .home{
-        width: 100vw !important;
-    }
 
     .home .main{
     
@@ -159,5 +188,18 @@ video{
         background-size: 700px 350px;
         background-repeat: no-repeat;
     
+    }
+
+  }
+
+  @media only screen and (min-width: 768px) {
+    .start-cue, .panel{
+        width: 80%;
+    }
+    .home{
+        width: 50vw !important;
+    }
+    #navigate-vivid{
+        width: 80vh;
     }
   }
