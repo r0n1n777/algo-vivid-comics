@@ -141,6 +141,10 @@ video{
 }
 
 
+.start-cue{
+    height: 730px; width: 500px !important; object-fit: cover;
+}
+
 .start-cue, .panel{
     width: 80%;
 }
@@ -179,15 +183,17 @@ video{
 
 
 @media only screen and (max-width: 768px) {
-
     .home .main{
-    
         height: 500px;
         background-image: url(./Assets/Panel3-6_ud@2x.png);
         background-position: 50px;
         background-size: 700px 350px;
         background-repeat: no-repeat;
-    
+    }
+
+    .panel-watch{
+        width: 450px !important;
+
     }
 
   }
