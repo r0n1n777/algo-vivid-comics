@@ -1,13 +1,32 @@
+@font-face {
+    font-family: 'NothingYouCouldDo';
+    src: url('./Assets/SinkinSans-400Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: 'NothingYouCouldDo' !important;
+}
+
 .home{
-    background-image: url(./Assets/Colors.jpg);
+    background: black;
+    width: 50vw !important;
+}
+
+.home .landing-page{
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.4)),url('./Assets/Colors.jpg');
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
 }
 
 .home .main{
-    width: 90%;
+    
     height: 500px;
+    background-image: url(./Assets/Panel3-6_ud@2x.png);
+    background-position: 168px;
+    background-size: 700px 350px;
+    background-repeat: no-repeat;
 
 }
 
@@ -16,20 +35,18 @@
 }
 
 .home .brand p{
-    color: #69465F;
+    color: #998294;
 }
 
 .home .title h1{
-    font-family: 'Rubik', sans-serif;
-    font-weight: bold;
-    font-size: 130px;
+    font-weight:bolder;
+    font-size: 70px;
 }
 
-.home .main{
-    background-image: url(./Assets/Panel3-6_ud@2x.png);
-    background-position: center;
-    background-size: cover;
+.home .title p{
+    font-size: 12px;
 }
+
 
 .circle{
     top: 247px;
@@ -60,19 +77,53 @@ video{
 
 .panel{
     height: 300px;
+    width: 600px;
     background: black;
     border-radius: 20px;
-}
-.panel h1:nth-child(1){
-    color: white;
+    position: relative;
 }
 
-.panel h1:nth-child(2){
+.panel-watch img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.panel h3:nth-child(1){
+    color: white;
+    font-weight: bold;
+}
+
+.panel h3:nth-child(2){
     color: #0C86E3;
+    font-weight: bold;
+
+}
+.panel-navigate h1{
+    font-weight: bold;
+}
+.panel-navigate p{
+    letter-spacing: 2px;
 }
 
 .panel p{
-    color: #69465F;
+    color: white;
+    font-size: 10px;
+}
+
+.panel-watch{
+    background-image: url(./Assets/01-Watch.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.panel-navigate{
+    background-image: url(./Assets/How-to-Navigate.png);
+    background-size: cover;
+    background-position: 150px;
+    background-repeat: no-repeat;
 }
 
 .navigate{
@@ -84,32 +135,29 @@ video{
     cursor: pointer;
 }
 
+.panel{
+    width: 100%;
+}
 
+
+.start-cue, .panel{
+    width: 80%;
+}
 
 
 
 @media only screen and (max-width: 768px) {
-    .home .title h1{
-        font: 'Rubik', sans-serif;
-        font-weight: bold;
-        font-size: 100px;
-    }
-    .home .title{
-        margin-bottom: 25px;
-
-    }
-    .panel{
-        width: 100%;
+    .home{
+        width: 100vw !important;
     }
 
-  }
-
-  @media only screen and (min-width: 768px) {
-    .start-cue, .panel{
-        width: 80%;
-    }
-    .home, #navigate-vivid{
-        width: 80vh !important;
-    }
+    .home .main{
     
+        height: 500px;
+        background-image: url(./Assets/Panel3-6_ud@2x.png);
+        background-position: 50px;
+        background-size: 700px 350px;
+        background-repeat: no-repeat;
+    
+    }
   }
