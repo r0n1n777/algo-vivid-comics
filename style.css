@@ -1,12 +1,18 @@
 @font-face {
-    font-family: 'NothingYouCouldDo';
+    font-family: 'Sinkin';
     src: url('./Assets/SinkinSans-400Regular.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NothingYouCouldDo';
+    src: url('./Assets/NothingYouCouldDo-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 body{
-    font-family: 'NothingYouCouldDo' !important;
+    font-family: 'Sinkin' !important;
     scroll-behavior: smooth;
 }
 
@@ -142,7 +148,7 @@ video{
 
 
 .start-cue{
-    height: 730px; width: 500px !important; object-fit: cover;
+    height: 730px; width: 500px; object-fit: cover;
 }
 
 .start-cue, .panel{
@@ -179,10 +185,48 @@ video{
 }
 
 
+.vid-container h5{
+    font-family: "NothingYouCouldDo";
+}
+
+.vid-container{
+    position: relative;
+}
+
+.home-button-page{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.pagination a{
+    color: #5CD0EE;
+    position: sticky;
+}
+
+.scroll{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    
+}
+
+.end{
+    margin: 15rem 0;
+}
+
+
+
 
 
 
 @media only screen and (max-width: 768px) {
+
+    .start-cue{
+        width: 100%;
+    }
+
     .home .main{
         height: 500px;
         background-image: url(./Assets/Panel3-6_ud@2x.png);
@@ -192,20 +236,18 @@ video{
     }
 
     .panel-watch{
-        width: 450px !important;
+        width: 100%;
 
     }
 
   }
 
   @media only screen and (min-width: 768px) {
-    .start-cue, .panel{
-        width: 80%;
-    }
+    
     .home{
         width: 50vw !important;
     }
-    #navigate-vivid{
-        width: 80vh;
+    #navigate-vivid, .page{
+        width: 80vh !important;
     }
   }
