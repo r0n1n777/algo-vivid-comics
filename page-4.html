@@ -13,10 +13,25 @@
 </head>
 <body style="background: black">
 
-<div class="container page border border-danger">
+<div class="container page p-0">
     <img src="./Assets/hamburger.png"  width="100px" onclick="menu()" class="home-button-page">
-    <!--Menu-->
 
+    <!--Navbar-->
+    <div class="page-navbar-wrapper">
+        <div class="page-navbar mb-5 w-100 d-flex justify-content-around align-items-center">
+            <div class="brand d-flex justify-content-center align-items-center">
+                <p class="mb-0">Keith Dela Cruz</p>
+            </div>
+            <div class="links d-flex justify-content-center align-items-center">
+                <a class="nav-link" href="home.html">Home</a>
+                <a class="nav-link" href="#start-cue" onclick="feature()">Features</a>
+                <a class="nav-link" href="#" onclick="menu()">Vivid</a>
+                
+            </div>
+        </div>
+    </div>
+
+    <!--Menu-->
     <div class="menu border border-light m-3 p-3">
         <img src="./Assets/hamburger.png" alt="" id="menu" width="100px">
         <div class="row">
@@ -101,7 +116,7 @@
     <div class="page-content">
         <div class="d-flex flex-column justify-content-center align-items-center ">
             <div class="vid-container text-white text-center">
-                <video autoplay class="border border-primary">
+                <video autoplay>
                     <source src="./Assets/Page4.mp4" type="video/mp4">
                     Your browser does not support HTML5 video.
                 </video>
@@ -131,19 +146,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 
 
-<script>
-
-    $(".menu").hide();
-
-    function menu(){
-        $(".menu").show();
-        $(".page-content").hide();
-        $(".home-button-page").hide();
-
-
-    }
-
-</script>
+<script src="main.js"></script>
 
 </body>
 </html>
