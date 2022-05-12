@@ -11,7 +11,7 @@
   
 
 </head>
-<body style="background: black">
+<body style="background: black;">
 
 <div class="container page p-0">
     <img src="./Assets/hamburger.png"  width="100px" onclick="menu()" class="home-button-page">
@@ -24,7 +24,7 @@
             </div>
             <div class="links d-flex justify-content-center align-items-center">
                 <a class="nav-link" href="home.html">Home</a>
-                <a class="nav-link" href="#start-cue" onclick="feature()">Features</a>
+                <a class="nav-link" href="vivid-features.html" onclick="feature()">Features</a>
                 <a class="nav-link" href="#" onclick="menu()">Vivid</a>
                 
             </div>
@@ -119,13 +119,14 @@
                     <source src="./Assets/Page7-Final_1.mp4" type="video/mp4">
                     Your browser does not support HTML5 video.
                 </video>
-                <img src="./Assets/Scroll.png" alt="" width="50px" class="scroll">
+                <a href="#toBottom"><img src="./Assets/Scroll.png" alt="" width="50px" class="scroll cursor-pointer"></a>
+                
             </div>
 
             <h3 class="text-danger font-weight-bold end">THE END</h3>
 
             <img src="./Assets/Cover.png" alt="" class="img-fluid">
-            <div class="pagination text-primary">
+            <div class="pagination text-primary" id="toBottom">
                 <a href="page-1.html" class="mx-2 nav-link">1</a>
                 <a href="page-2.html" class="mx-2 nav-link">2</a>
                 <a href="page-3.html" class="mx-2 nav-link">3</a>

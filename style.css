@@ -14,6 +14,7 @@
 body{
     font-family: 'Sinkin' !important;
     scroll-behavior: smooth;
+    background: black;
 }
 
 .home{
@@ -228,11 +229,7 @@ video{
 
 
 
-@media only screen and (max-width: 768px){
-    .menu a img{
-        width: 100px;
-    }
-}
+
 
 
 @media only screen and (max-width: 768px) {
@@ -255,6 +252,12 @@ video{
     }
 
   }
+
+  @media only screen and (max-width: 400px){
+    .menu a img{
+        width: 100px;
+    }
+}
 
   @media only screen and (min-width: 768px) {
     
