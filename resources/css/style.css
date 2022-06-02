@@ -1,20 +1,56 @@
 @font-face {
     font-family: 'Sinkin';
-    src: url('./Assets/SinkinSans-400Regular.otf') format('truetype');
+    src: url('/public/fonts/SinkinSans-400Regular.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'SinkinBold';
+    src: url('/public/fonts/SinkinSans-700Bold.otf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
 @font-face {
     font-family: 'NothingYouCouldDo';
-    src: url('./Assets/NothingYouCouldDo-Regular.ttf') format('truetype');
+    src: url('/public/fonts/NothingYouCouldDo-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+}
+
+.bold {
+    font-family: 'SinkinBold' !important;
 }
 
 body{
     font-family: 'Sinkin' !important;
     scroll-behavior: smooth;
-    background: black;
+    background: black !important;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 0.1em;
+    
+}
+   
+::-webkit-scrollbar-track {
+    background-color: black;
+    
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 200px;
+}
+
+.navbar {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px);
 }
 
 .home{
@@ -22,7 +58,7 @@ body{
 }
 
 .home .landing-page{
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.4)),url('./Assets/Colors.jpg');
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.4)),url('/public/assets/Colors.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -30,11 +66,32 @@ body{
 .home .main{
     
     height: 500px;
-    background-image: url(./Assets/Panel3-6_ud@2x.png);
+    background-image: url(/public/assets/Panel3-6_ud@2x.png);
     background-position: 168px;
     background-size: 700px 350px;
     background-repeat: no-repeat;
 
+}
+
+.view-now-left {
+    position: absolute;
+    width: 154px;
+    height: 138px;
+    z-index: 2;
+    background: #FFBB01 0% 0% no-repeat padding-box;
+    font-family: 'NothingYouCouldDo';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+.view-now-tail {
+    position: absolute;
+    opacity: 1;
+    height: 80px;
 }
 
 .links a{
@@ -122,13 +179,13 @@ video{
 }
 
 .panel-watch{
-    background-image: url(./Assets/01-Watch.png);
+    background-image: url(/public/assets/01-Watch.png);
     background-size: cover;
     background-position: center;
 }
 
 .panel-navigate{
-    background-image: url(./Assets/How-to-Navigate.png);
+    background-image: url(/public/assets/How-to-Navigate.png);
     background-size: cover;
     background-position: 150px;
     background-repeat: no-repeat;
@@ -158,13 +215,30 @@ video{
 
 .menu{
     border-radius: 20px;
-    position: relative;
+    position: fixed;
+    top: 90px;
     background: black;
+    z-index: 5000;
+    height: 82vh;
+    overflow-y: auto;
 }
-#menu{
+
+.menu-button {
+    position: fixed;
+    left: 20px;
+    top: 65px;
+    z-index: 9000;
+}
+
+.menu-button-page {
+    top: 20px;
+    left: 20px;
+}
+
+.page-content {
     position: absolute;
-    left: 0px;
-    top: -40px;
+    top: 0;
+    z-index: 9000;
 }
 
 .page-number{
@@ -223,15 +297,6 @@ video{
     padding: 2rem 0;
 }
 
-
-
-
-
-
-
-
-
-
 @media only screen and (max-width: 768px) {
 
     .start-cue{
@@ -240,7 +305,7 @@ video{
 
     .home .main{
         height: 500px;
-        background-image: url(./Assets/Panel3-6_ud@2x.png);
+        background-image: url(/public/assets/Panel3-6_ud@2x.png);
         background-position: 50px;
         background-size: 700px 350px;
         background-repeat: no-repeat;
