@@ -27,7 +27,7 @@ const Pagination = ({
       <div className="pagination d-flex justify-content-around align-items-center w-50">
         <h5
           ref={page1}
-          style={currentPage == 1 ? enlargeStyle : defaultStyle}
+          style={currentPage === 1 ? enlargeStyle : defaultStyle}
           onClick={() => {
             setCurrentPage(1);
           }}
@@ -38,12 +38,12 @@ const Pagination = ({
 
         <h5
           ref={page2}
-          style={currentPage == 2 ? enlargeStyle : defaultStyle}
+          style={currentPage === 2 ? enlargeStyle : defaultStyle}
           onClick={() => {
             setCurrentPage(2);
             setEncircled(0);
           }}
-          className={encircled == 2 ? "mb-0 set-encircled" : "mb-0"}
+          className={encircled === 2 ? "mb-0 set-encircled" : "mb-0"}
         >
           2
         </h5>
@@ -51,17 +51,17 @@ const Pagination = ({
         <h5
           animate={null}
           ref={page3}
-          style={currentPage == 3 ? enlargeStyle : defaultStyle}
+          style={currentPage === 3 ? enlargeStyle : defaultStyle}
           onClick={() => {
             setCurrentPage(3);
             setEncircled(0);
           }}
-          className={encircled == 3 ? "mb-0 set-encircled" : "mb-0"}
+          className={encircled === 3 ? "mb-0 set-encircled" : "mb-0"}
         >
           3
         </h5>
 
-        {currentPage == 7 && (
+        {currentPage === 7 && (
           <img
             src="./Assets/Home Button.png"
             onClick={() => {
@@ -75,48 +75,48 @@ const Pagination = ({
 
         <h5
           ref={page4}
-          style={currentPage == 4 ? enlargeStyle : defaultStyle}
+          style={currentPage === 4 ? enlargeStyle : defaultStyle}
           onClick={() => {
             setCurrentPage(4);
             setEncircled(0);
           }}
-          className={encircled == 4 ? "mb-0 set-encircled" : "mb-0"}
+          className={encircled === 4 ? "mb-0 set-encircled" : "mb-0"}
         >
           4
         </h5>
 
         <h5
           ref={page5}
-          style={currentPage == 5 ? enlargeStyle : defaultStyle}
+          style={currentPage === 5 ? enlargeStyle : defaultStyle}
           onClick={() => {
             setCurrentPage(5);
             setEncircled(0);
           }}
-          className={encircled == 5 ? "mb-0 set-encircled" : "mb-0"}
+          className={encircled === 5 ? "mb-0 set-encircled" : "mb-0"}
         >
           5
         </h5>
 
         <h5
           ref={page6}
-          style={currentPage == 6 ? enlargeStyle : defaultStyle}
+          style={currentPage === 6 ? enlargeStyle : defaultStyle}
           onClick={() => {
             setCurrentPage(6);
             setEncircled(0);
           }}
-          className={encircled == 6 ? "mb-0 set-encircled" : "mb-0"}
+          className={encircled === 6 ? "mb-0 set-encircled" : "mb-0"}
         >
           6
         </h5>
 
         <h5
           ref={page7}
-          style={currentPage == 7 ? enlargeStyle : defaultStyle}
+          style={currentPage === 7 ? enlargeStyle : defaultStyle}
           onClick={() => {
             setCurrentPage(7);
             setEncircled(0);
           }}
-          className={encircled == 7 ? "mb-0 set-encircled" : "mb-0"}
+          className={encircled === 7 ? "mb-0 set-encircled" : "mb-0"}
         >
           7
         </h5>

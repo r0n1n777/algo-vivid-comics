@@ -30,21 +30,21 @@ const VividTotourial = ({
       id: 1,
       video: (
         <video
+          poster={"./Assets/loading.gif"}
           style={videoStyle}
           className="img-fluid"
           autoPlay
           muted
           onClick={handleNext}
-        >
-          <source src={"./Assets/Panel 1.mp4"} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+          src={"./Assets/Panel-1.mp4"}
+        ></video>
       ),
     },
     {
       id: 2,
       video: (
         <video
+          poster={"./Assets/loading.gif"}
           style={videoStyle}
           className="img-fluid"
           autoPlay
@@ -60,6 +60,7 @@ const VividTotourial = ({
       id: 3,
       video: (
         <video
+          poster={"./Assets/loading.gif"}
           style={videoStyle}
           className="img-fluid"
           autoPlay
@@ -75,6 +76,7 @@ const VividTotourial = ({
       id: 4,
       video: (
         <video
+          poster={"./Assets/loading.gif"}
           style={videoStyle}
           className="img-fluid"
           autoPlay

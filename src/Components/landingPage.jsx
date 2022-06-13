@@ -42,7 +42,7 @@ const LandingPage = ({ handleStartCue }) => {
             <h1 style={{ color: "#0C85E2" }}>
               <strong>Watch</strong>
             </h1>
-            <p className="text-secondary">
+            <p className="text-secondary watch-p">
               <strong>How to navigate through vivid</strong>{" "}
             </p>
           </div>

@@ -34,6 +34,10 @@ class Vivid extends Component {
               alt="hamburger"
               width="100px"
             />
+            <div className="scroll-button d-flex justify-content-end align-items-center w-100">
+              <img src={"./Assets/Scroll.png"} alt="scroll" width="30px" />
+            </div>
+
             <div className="video-wrapper py-5">
               <p className="mb-0 text-white text-nowrap">
                 I'm not sure if I can still remember
@@ -85,6 +89,9 @@ class Vivid extends Component {
       case 2:
         return (
           <div className="page">
+            <div className="scroll-button d-flex justify-content-end align-items-center w-100">
+              <img src={"./Assets/Scroll.png"} alt="scroll" width="30px" />
+            </div>
             <div className="wrapper">
               <img
                 src="./Assets/hamburger.png"
@@ -95,6 +102,7 @@ class Vivid extends Component {
                 }}
               />
               <video
+                poster={"./Assets/loading.gif"}
                 src={"./Assets/Page2_1.mp4"}
                 className="img-fluid"
                 autoPlay
@@ -108,6 +116,9 @@ class Vivid extends Component {
       case 3:
         return (
           <div className="page">
+            <div className="scroll-button d-flex justify-content-end align-items-center w-100">
+              <img src={"./Assets/Scroll.png"} alt="scroll" width="30px" />
+            </div>
             <div className="wrapper">
               <img
                 src="./Assets/hamburger.png"
@@ -118,6 +129,7 @@ class Vivid extends Component {
                 }}
               />
               <video
+                poster={"./Assets/loading.gif"}
                 src={"./Assets/Page3.mp4"}
                 className="img-fluid"
                 autoPlay
@@ -131,6 +143,9 @@ class Vivid extends Component {
       case 4:
         return (
           <div className="page">
+            <div className="scroll-button d-flex justify-content-end align-items-center w-100">
+              <img src={"./Assets/Scroll.png"} alt="scroll" width="30px" />
+            </div>
             <div className="wrapper">
               <img
                 src="./Assets/hamburger.png"
@@ -141,6 +156,7 @@ class Vivid extends Component {
                 }}
               />
               <video
+                poster={"./Assets/loading.gif"}
                 src={"./Assets/Page4.mp4"}
                 className="img-fluid"
                 autoPlay
@@ -154,6 +170,9 @@ class Vivid extends Component {
       case 5:
         return (
           <div className="page">
+            <div className="scroll-button d-flex justify-content-end align-items-center w-100">
+              <img src={"./Assets/Scroll.png"} alt="scroll" width="30px" />
+            </div>
             <div className="wrapper">
               <img
                 src="./Assets/hamburger.png"
@@ -164,6 +183,7 @@ class Vivid extends Component {
                 }}
               />
               <video
+                poster={"./Assets/loading.gif"}
                 src={"./Assets/Page5.mp4"}
                 className="img-fluid"
                 autoPlay
@@ -177,6 +197,9 @@ class Vivid extends Component {
       case 6:
         return (
           <div className="page">
+            <div className="scroll-button d-flex justify-content-end align-items-center w-100">
+              <img src={"./Assets/Scroll.png"} alt="scroll" width="30px" />
+            </div>
             <div className="wrapper">
               <img
                 src="./Assets/hamburger.png"
@@ -187,6 +210,7 @@ class Vivid extends Component {
                 }}
               />
               <video
+                poster={"./Assets/loading.gif"}
                 src={"./Assets/Page-6.mp4"}
                 className="img-fluid"
                 autoPlay
@@ -200,6 +224,9 @@ class Vivid extends Component {
       case 7:
         return (
           <div className="page">
+            <div className="scroll-button d-flex justify-content-end align-items-center w-100">
+              <img src={"./Assets/Scroll.png"} alt="scroll" width="30px" />
+            </div>
             <div className="wrapper">
               <img
                 src="./Assets/hamburger.png"
@@ -210,6 +237,7 @@ class Vivid extends Component {
                 }}
               />
               <video
+                poster={"./Assets/loading.gif"}
                 src={"./Assets/Page7-Final_1.mp4"}
                 className="img-fluid"
                 autoPlay
@@ -225,6 +253,8 @@ class Vivid extends Component {
             {pagination}
           </div>
         );
+      default:
+        console.log("Invalid number provided");
     }
   }
 }

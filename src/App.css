@@ -375,6 +375,13 @@ body{
   transition: .5s;
 }
 
+.scroll-button{
+  position: sticky;
+  top: 80vh;
+  right: 5rem;
+  z-index: 99;
+}
+
 
 
 
@@ -394,6 +401,7 @@ body{
   .watch p{
     font-size: 10px;
   }
+ 
   .navbar{
     width: 100%;
   }
@@ -426,5 +434,37 @@ body{
     height: 3rem;
 
   }
+
   
+  
+}
+
+@media screen and (max-width: 568px){
+  .play{
+    width: 5rem;
+    z-index: 98;
+  }
+  .watch-p{
+    width: 75%;
+  }
+  .landing-cover{
+    background-position: 100px;
+  }
+  .how-to{
+    background-position: 0rem;
+  }
+  .menu .container-fluid img{
+    width: 145px;
+  }
+  .menu .col-3 p, .menu .col-3 h5{
+    font-size: 10px;
+  }
+  .menu .col-3 h1{
+    font-size: 20px;
+  }
+  .menu .col-3 .circle{
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
 }
