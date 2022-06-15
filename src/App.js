@@ -23,7 +23,7 @@ function App() {
       startCue.play();
       setClick(true);
     } else {
-      navigate("/vivid-totourial");
+      navigate("/vivid-tutorial");
     }
   };
 
@@ -46,7 +46,7 @@ function App() {
             }
           />
           <Route
-            path="vivid-totourial"
+            path="vivid-tutorial"
             element={
               <VividTotourial
                 setClick={setClick}
