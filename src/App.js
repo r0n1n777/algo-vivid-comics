@@ -2,7 +2,7 @@ import "./App.css";
 import Home from "./Components/home";
 import VividTotourial from "./Components/vividTotourial";
 import { Routes, Route, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Vivid from "./Components/vivid";
 
 function App() {
@@ -13,9 +13,17 @@ function App() {
   const [pageToShow, setPageToShow] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
   const [encircled, setEncircled] = useState(0);
-
-
+  const [isLoading, setLoading] = useState(true);
+ 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    
+  setTimeout(() => {
+    setLoading(false);
+  }, 1000)
+
+  }, [])
 
   const handleStartCue = () => {
     const startCue = document.getElementById("startCue");
@@ -26,6 +34,10 @@ function App() {
       navigate("/vivid-tutorial");
     }
   };
+
+  if(isLoading){
+    return <div className="container-fluid loading-screen bg-black d-flex justify-content-center align-items-center"><img src="./Assets/loading.gif"></img></div>
+  }
 
   return (
     <div className="container d-flex justify-content-center align-items-center p-0">

@@ -397,6 +397,10 @@ body{
   z-index: 99;
 }
 
+.loading-screen{
+  height: 100vh;
+}
+
 
 
 
