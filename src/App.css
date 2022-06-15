@@ -1,0 +1,480 @@
+@font-face {
+  font-family: Sinkin;
+  src: url(../public/Assets/SinkinSans-400Regular.otf) format('opentype');
+}
+
+@font-face {
+  font-family: NothingYouCouldDo;
+  src: url(../public/Assets/NothingYouCouldDo-Regular.otf) format('opentype');
+}
+
+::-webkit-scrollbar {
+    width: 0.1em;
+}
+   
+::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 200px;
+}
+
+body{
+  font-family: 'Sinkin', serif !important;
+}
+
+.container-root{
+  width: 40vw;
+  min-height: 100vh;
+}
+
+.nav-copy{
+  height: 14vh;
+}
+
+.navbar{
+  background-image: url(../public/Assets/Colors@2x\(edited1\).png);
+  background-position: center;
+  background-size: 100% 100%;
+  height: 15vh;
+  position: fixed !important;
+  width: 40vw;
+  z-index: 99;
+  top: 0;
+
+}
+.navbar-nav a{
+  color: #F39D47;
+}
+
+.landing{
+  height: 85vh;
+  margin-top: -60px;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../public/Assets/Colors.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.landing-cover{
+  background-image: url(../public/Assets/Panel3-6_ud@2x.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 170px;
+}
+
+.landing-cover h1{
+  letter-spacing: 4px;
+  font-size: 5rem;
+}
+
+.landing-cover p {
+  font-size: 12px;
+  position: relative;
+}
+
+.landing-cover .title{
+  padding-top: 5rem !important;
+}
+
+.content{
+  background: black;
+  min-height: 100vh;
+}
+
+.watch{
+  position: relative;
+}
+
+.watch .play{
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.watch .title{
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+}
+
+.watch h1{
+  font-size: 23px;
+}
+.watch p{
+  font-size: 11px;
+  opacity: 0.5;
+}
+.how-to{
+  height: 20rem;
+  background-image: url(../public/Assets/How-to-Navigate.png);
+  background-position: 12rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.how-to h1{
+  font-size: 25px;
+}
+
+.how-to p{
+  font-size: 10px;
+  opacity: 0.3;
+}
+
+.view-now{
+  width: 150px;
+  height: 130px;
+  background: #FFBB01;
+  border-radius: 50%;
+  position:absolute;
+  bottom: 0;
+  margin-bottom: -2rem;
+}
+
+.view-now p, .view-now-2 p{
+  font-family: NothingYouCouldDo !important;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.view-now-tail{
+  position: absolute;
+  bottom: -50px;
+  transform: rotate(10deg);
+  left: 0;
+  z-index: 1;
+}
+
+.view-now-2{
+  width: 130px;
+  height: 110px;
+  background: #FFBB01;
+  border-radius: 50%;
+  position:absolute;
+  top: 3rem;
+  right: 4rem;
+}
+
+.view-now-2-tail{
+  position: absolute;
+  bottom: -50px;
+  transform: rotate(230deg);
+  right: 0;
+  top: -2rem;
+  z-index: 1;
+}
+
+.start-cue{
+  position: relative;
+}
+
+.start-cue p{
+  visibility: hidden;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle{
+  top: 247px;
+  left: 127px;
+  width: 85px;
+  height: 85px;
+  /* UI Properties */
+  border: 2px solid rgba(255,172,6,.5);
+  border-radius: 100%;
+}
+
+.circle p{
+  transform: matrix(0, 1, -1, 0, 0, 0);
+  /* UI Properties */
+  text-align: left;
+  font: normal normal medium 20px/15px Sinkin Sans 500;
+  letter-spacing: 0px;
+  opacity: 1 !important;
+}
+
+.arrow-down{
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  margin-left: 5px;
+  border-top: 5px solid #F39D47;
+}
+
+.menu{
+  min-height: 100vh;
+  position: relative;
+  margin-top: 2rem;
+  border-radius: 2rem;
+}
+.hamburger{
+  position: absolute;
+  top: -2.5rem;
+  left: 0;
+}
+
+.page-number{
+  position: relative;
+}
+
+.page-number p{
+  transform: matrix(0, -1, 1, 0, 0, 0);
+  
+  font: normal normal 300 13px/80px Sinkin Sans 300;
+  letter-spacing: 1.95px;
+  color: #FFFFFF;
+  font-size: 9px;
+ 
+  
+}
+
+.panel-wrapper{
+  position: relative;
+}
+
+.viewable{
+  background-color: #F2BA04;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  transform: rotate(330deg);
+  position: absolute;
+  bottom: 0;
+  right: 1rem;
+}
+
+.viewable p{
+  font-size: 13px;
+  color: white;
+}
+
+.not-viewable{
+  background-color: #28A199;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 100%;
+  transform: rotate(330deg);
+  position: absolute;
+  bottom: 0;
+  right: 1rem;
+}
+
+.not-viewable p{
+  color: white;
+  font-size: 10px;
+}
+
+.circle h1{
+  margin-top: -2rem;
+  margin-left: -3rem;
+  font-size: 30px;
+ 
+}
+.circle h5{
+  font-size: 13px;
+  opacity: 0.6;
+  margin-right: -1rem;
+}
+
+
+.page p{
+  font-family: NothingYouCouldDo;
+}
+
+.video-wrapper{
+  position: relative;
+ 
+}
+.video-wrapper p{
+  font-family: NothingYouCouldDo;
+  position: absolute;
+  top: 27%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.video-wrapper{
+  position: relative;
+}
+
+.video-wrapper .tangled3{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ 
+}
+
+.leafs{
+  position: relative;
+  width: 40vw;
+  height: 20rem;
+}
+
+.leafs img{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.leafs img:nth-child(1){
+ left: 60%;
+}
+.leafs img:nth-child(2){
+  top: 30%;
+  left: 40%;
+}
+.leafs img:nth-child(3){
+  top: 50%;
+  left: 60%;
+}
+
+.leafs img:nth-child(4){
+  top: 80%;
+}
+
+.cover-wrapper{
+  position: relative;
+}
+
+.cover-wrapper .first-text{
+  position: absolute;
+  bottom: 3rem;
+  left: 3rem;
+}
+
+.grey-background{
+  background: #707070;
+  padding: 10px 20px;
+  border-radius: 1rem;
+  margin-top: -2rem;
+  margin-left: 3rem;
+ 
+}
+.A-panel-wrapper{
+  position: relative;
+}
+.A-panel-wrapper p{
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+}
+
+.pagination h5{
+  color: #39D0EB;
+}
+
+.the-end{
+  color: #BC1D1D;
+  padding: 5rem 0;
+}
+
+.set-encircled{
+  border: 1px solid #39D0EB;
+  padding: 3px 7px;
+  border-radius: 100%;
+  transition: .5s;
+}
+
+.scroll-button{
+  position: sticky;
+  top: 80vh;
+  right: 5rem;
+  z-index: 99;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 768px){
+
+
+  .container-root, .leafs{
+    width: 100%;
+  }
+
+  .watch h1{
+    font-size: 20px;
+  }
+  .watch p{
+    font-size: 10px;
+  }
+ 
+  .navbar{
+    width: 100%;
+  }
+
+  .navbar a{
+  font-size: 12px;}
+
+  .menu .container-fluid img{
+    width: 160px;
+  }
+
+  .viewable{
+   
+    width: 4rem;
+    height: 4rem;
+  
+  }
+
+  .viewable p{
+    font-size: 10px;
+  }
+  .not-viewable p{
+    font-size: 8px;
+  }
+  
+
+  .not-viewable{
+   
+    width: 3rem;
+    height: 3rem;
+
+  }
+
+  
+  
+}
+
+@media screen and (max-width: 568px){
+  .play{
+    width: 5rem;
+    z-index: 98;
+  }
+  .landing-cover{
+    background-position: 100px;
+  }
+  .how-to{
+    background-position: 6rem;
+  }
+  .menu .container-fluid img{
+    width: 145px;
+  }
+  .menu .col-3 p, .menu .col-3 h5{
+    font-size: 10px;
+  }
+  .menu .col-3 h1{
+    font-size: 20px;
+  }
+  .menu .col-3 .circle{
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+}
