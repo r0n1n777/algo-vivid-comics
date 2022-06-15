@@ -19,7 +19,7 @@ const Navbar2 = ({ disabledVivid, setPageToShow, pageToShow }) => {
                 className="nav-item nav-link mx-2 mx-md-3 d-flex justify-content-center align-items-center"
                 href="#"
               >
-                Home
+                HOME
                 <span className={pageToShow == 0 ? "arrow-down" : ""}></span>
               </a>
 
@@ -29,7 +29,7 @@ const Navbar2 = ({ disabledVivid, setPageToShow, pageToShow }) => {
                   setPageToShow(1);
                 }}
               >
-                Features
+                FEATURES
                 <span className={pageToShow == 1 ? "arrow-down" : ""}></span>
               </a>
               <a
@@ -46,7 +46,7 @@ const Navbar2 = ({ disabledVivid, setPageToShow, pageToShow }) => {
                 }
                 href="#"
               >
-                Vivid
+                VIVID
                 <span className={pageToShow == 2 ? "arrow-down" : ""}></span>
               </a>
             </div>

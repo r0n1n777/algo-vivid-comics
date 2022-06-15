@@ -14,8 +14,8 @@ const Navbar = ({ disabledVivid }) => {
           </div>
           <div className="col-8 d-flex justify-content-end align-items-center">
             <div className="navbar-nav d-flex flex-row justify-content-center align-items-center">
-              <a className="nav-item nav-link mx-2 mx-md-3" href="#">
-                Home
+              <a className="nav-item nav-link mx-2 mx-md-3" href="/">
+                HOME
               </a>
               <a
                 className="nav-item nav-link mx-2 mx-md-3"
@@ -25,7 +25,7 @@ const Navbar = ({ disabledVivid }) => {
                     .scrollIntoView(true)
                 }
               >
-                Features
+                FEATURES
               </a>
               <a
                 style={
@@ -40,7 +40,7 @@ const Navbar = ({ disabledVivid }) => {
                 }
                 href="#"
               >
-                Vivid
+                VIVID
               </a>
             </div>
           </div>

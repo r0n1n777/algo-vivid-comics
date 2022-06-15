@@ -1,15 +1,28 @@
 @font-face {
   font-family: Sinkin;
-  src: url(../public/Assets/SinkinSans-400Regular.otf);
+  src: url(../public/Assets/SinkinSans-400Regular.otf) format('opentype');
 }
 
 @font-face {
   font-family: NothingYouCouldDo;
-  src: url(../public/Assets/NothingYouCouldDo-Regular.otf);
+  src: url(../public/Assets/NothingYouCouldDo-Regular.otf) format('opentype');
+}
+
+::-webkit-scrollbar {
+    width: 0.1em;
+}
+   
+::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 200px;
 }
 
 body{
-  font-family: Sinkin !important;
+  font-family: 'Sinkin', serif !important;
 }
 
 .container-root{
@@ -18,7 +31,7 @@ body{
 }
 
 .nav-copy{
-  height: 15vh;
+  height: 14vh;
 }
 
 .navbar{
@@ -93,7 +106,7 @@ body{
 }
 .watch p{
   font-size: 11px;
-  
+  opacity: 0.5;
 }
 .how-to{
   height: 20rem;
@@ -108,7 +121,8 @@ body{
 }
 
 .how-to p{
-  font-size: 13px;
+  font-size: 10px;
+  opacity: 0.3;
 }
 
 .view-now{
@@ -122,7 +136,6 @@ body{
 }
 
 .view-now p, .view-now-2 p{
-  z-index: 2;
   font-family: NothingYouCouldDo !important;
   font-weight: bold;
   font-size: 1.5rem;
@@ -444,14 +457,11 @@ body{
     width: 5rem;
     z-index: 98;
   }
-  .watch-p{
-    width: 75%;
-  }
   .landing-cover{
     background-position: 100px;
   }
   .how-to{
-    background-position: 0rem;
+    background-position: 6rem;
   }
   .menu .container-fluid img{
     width: 145px;

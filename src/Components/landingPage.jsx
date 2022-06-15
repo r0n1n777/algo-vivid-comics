@@ -8,10 +8,10 @@ const LandingPage = ({ handleStartCue }) => {
       <div className="container-fluid landing p-0">
         <div className="landing-cover w-100 h-100">
           <div className="title text-white m-3 m-md-5 mt-5">
-            <h1>
-              <strong>VIVID</strong>
+            <h1 className="fw-bold">
+              VIVID
             </h1>
-            <p>A hybrid form of animation and comics</p>
+            <p className="opacity-75">A hybrid form of animation and comics</p>
           </div>
           <div className="view-now mx-4 d-flex justify-content-center align-items-center">
             <p className="mb-0 text-white">View Now.</p>
@@ -42,18 +42,18 @@ const LandingPage = ({ handleStartCue }) => {
             <h1 style={{ color: "#0C85E2" }}>
               <strong>Watch</strong>
             </h1>
-            <p className="text-secondary watch-p">
+            <p className="text-light watch-p">
               <strong>How to navigate through vivid</strong>{" "}
             </p>
           </div>
         </div>
         <div className="how-to mt-5 d-flex justify-content-start align-items-center">
-          <div className="title mx-3">
+          <div className="title mx-3 mt-5 pt-5">
             <h1 className="text-white">
               <strong>HOW TO</strong>
             </h1>
-            <p className="text-secondary">
-              <strong>Navigate through vivid expanded comics</strong>
+            <p className="text-light">
+              NAVIGATE THROUGH VIVID EXPANDED COMICS
             </p>
           </div>
         </div>

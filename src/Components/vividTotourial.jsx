@@ -20,8 +20,8 @@ const VividTotourial = ({
   };
 
   const videoStyle = {
-    height: "100vh",
-    width: "100%",
+    height: "auto",
+    width: "100vw",
   };
 
   const caro = useRef(null);
@@ -97,7 +97,7 @@ const VividTotourial = ({
   ]);
 
   return (
-    <div>
+    <div className="p-0 m-0">
       <Carousel
         ref={caro}
         easing={"fade"}
