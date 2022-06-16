@@ -8,9 +8,7 @@ const LandingPage = ({ handleStartCue }) => {
       <div className="container-fluid landing p-0">
         <div className="landing-cover w-100 h-100">
           <div className="title text-white m-3 m-md-5 mt-5">
-            <h1 className="fw-bold">
-              VIVID
-            </h1>
+            <h1 className="fw-bold">VIVID</h1>
             <p className="opacity-75">A hybrid form of animation and comics</p>
           </div>
           <div className="view-now mx-4 d-flex justify-content-center align-items-center">
@@ -30,7 +28,7 @@ const LandingPage = ({ handleStartCue }) => {
             onClick={() =>
               document.getElementById("start-cue-center").scrollIntoView(true)
             }
-            src={"./Assets/play.png"}
+            src={"./Assets/Play.png"}
             width="100px"
             alt="Play button"
             className="img-fluid play"
@@ -52,9 +50,7 @@ const LandingPage = ({ handleStartCue }) => {
             <h1 className="text-white">
               <strong>HOW TO</strong>
             </h1>
-            <p className="text-light">
-              NAVIGATE THROUGH VIVID EXPANDED COMICS
-            </p>
+            <p className="text-light">NAVIGATE THROUGH VIVID EXPANDED COMICS</p>
           </div>
         </div>
         <div className="start-cue">

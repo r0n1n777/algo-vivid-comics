@@ -33,7 +33,7 @@ const LandingPage2 = ({ pageToShow, handleStartCue }) => {
             <div className="watch">
               <img className="img-fluid" src={"./Assets/01-Watch.png"} alt="" />
               <img
-                src={"./Assets/play.png"}
+                src={"./Assets/Play.png"}
                 width="100px"
                 alt="Play button"
                 className="img-fluid play"

@@ -184,7 +184,7 @@ class Vivid extends Component {
               />
               <video
                 poster={"./Assets/loading.gif"}
-                src={"./Assets/Page5.mp4"}
+                src={"./Assets/page5.mp4"}
                 className="img-fluid"
                 autoPlay
                 muted
