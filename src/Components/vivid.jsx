@@ -248,7 +248,7 @@ class Vivid extends Component {
             <h5 className="the-end text-center py-5">
               <b>THE END</b>
             </h5>
-            <img className="img-fluid" src={"./Assets/cover.png"} alt="" />
+            <img className="img-fluid" src={"./Assets/Cover.png"} alt="" />
 
             {pagination}
           </div>

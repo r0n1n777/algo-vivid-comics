@@ -99,7 +99,7 @@ const Menu2 = ({ setCurrentPage }) => {
               <h5 className="text-white align-self-end">enjoy!</h5>
             </div>
           </div>
-          <div className="col-6 my-3 d-flex justify-content-center= align-items-center">
+          <div className="col-6 my-3 d-flex justify-content-center align-items-center">
             <div className="page-wrapper">
               <div className="page-number d-flex justify-content-start align-items-center">
                 <h1 className="text-white">07</h1>
