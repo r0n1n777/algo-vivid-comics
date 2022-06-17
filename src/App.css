@@ -1,11 +1,11 @@
 @font-face {
   font-family: Sinkin;
-  src: url(../public/Assets/SinkinSans-400Regular.otf) format('opentype');
+  src: url(../public/Assets/SinkinSans-400Regular.ttf) format('TrueType');
 }
 
 @font-face {
   font-family: NothingYouCouldDo;
-  src: url(../public/Assets/NothingYouCouldDo-Regular.otf) format('opentype');
+  src: url(../public/Assets/NothingYouCouldDo-Regular.ttf) format('TrueType');
 }
 
 ::-webkit-scrollbar {
@@ -392,15 +392,28 @@ body{
 
 .scroll-button{
   position: sticky;
-  top: 80vh;
+  top: 60vh;
   right: 5rem;
   z-index: 99;
+  
+}
+.scroll-button img{
+  width: 50px;
 }
 
 .loading-screen{
   height: 100vh;
 }
 
+.hamburger-wrapper{
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.hamburger{
+  margin-right: 20rem;
+}
 
 
 

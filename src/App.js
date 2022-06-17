@@ -14,16 +14,15 @@ function App() {
   const [currentPage, setCurrentPage] = useState(1);
   const [encircled, setEncircled] = useState(0);
   const [isLoading, setLoading] = useState(true);
- 
+  const [showPagination, setShowPagination] = useState(false);
+
   const navigate = useNavigate();
 
   useEffect(() => {
-    
-  setTimeout(() => {
-    setLoading(false);
-  }, 1000)
-
-  }, [])
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
 
   const handleStartCue = () => {
     const startCue = document.getElementById("startCue");
@@ -35,8 +34,12 @@ function App() {
     }
   };
 
-  if(isLoading){
-    return <div className="container-fluid loading-screen bg-black d-flex justify-content-center align-items-center"><img src="./Assets/loading.gif"></img></div>
+  if (isLoading) {
+    return (
+      <div className="container-fluid loading-screen bg-black d-flex justify-content-center align-items-center">
+        <img src="./Assets/loading.gif"></img>
+      </div>
+    );
   }
 
   return (
@@ -53,7 +56,6 @@ function App() {
                 isNavbar2={isNavbar2}
                 pageToShow={pageToShow}
                 disabledVivid={disabledVivid}
-               
               />
             }
           />
@@ -68,8 +70,20 @@ function App() {
               />
             }
           />
-          <Route path="vivid" element={<Vivid  currentPage={currentPage}
-                setCurrentPage={setCurrentPage} encircled={encircled} setEncircled={setEncircled} setPageToShow={setPageToShow}  />}/>
+          <Route
+            path="vivid"
+            element={
+              <Vivid
+                currentPage={currentPage}
+                setCurrentPage={setCurrentPage}
+                encircled={encircled}
+                setEncircled={setEncircled}
+                setPageToShow={setPageToShow}
+                showPagination={showPagination}
+                setShowPagination={setShowPagination}
+              />
+            }
+          />
         </Routes>
       </div>
     </div>
