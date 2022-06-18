@@ -254,7 +254,6 @@ const Vivid = ({
               onEnded={() => {
                 setShowPagination(true);
                 vid7.current.play();
-                setEncircled(3);
               }}
             ></video>
           </div>
