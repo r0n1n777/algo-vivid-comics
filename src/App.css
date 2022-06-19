@@ -161,6 +161,12 @@ body{
  
 }
 
+.view-now-2-wrapper{
+  position: sticky;
+  top: 2rem;
+  z-index: 99 ;
+}
+
 .view-now-2-tail{
   position: absolute;
   bottom: -50px;
@@ -290,31 +296,13 @@ body{
   font-family: NothingYouCouldDo;
 }
 
-.video-wrapper{
-  position: relative;
- 
-}
-.video-wrapper p{
-  font-family: NothingYouCouldDo;
+.tangledmind3{
   position: absolute;
-  top: 27%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+}
+.leaf-gif{
+  z-index: 2;
 }
 
-
-
-.video-wrapper{
-  position: relative;
-}
-
-.video-wrapper .tangled3{
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
- 
-}
 
 .leafs{
   position: relative;

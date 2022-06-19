@@ -64,30 +64,36 @@ const Vivid = ({
         <div className="page">
           {showPagination && scroll}
           {hamburger}
-          <div className="video-wrapper py-5">
-            <p className="mb-0 text-white text-nowrap">
-              I'm not sure if I can still remember
-            </p>
-            <img
-              className="img-fluid tangled3"
-              src="./Assets/TangledMind3.png"
-              alt="tangled mind 3"
-              width="600px"
-            />
-
+          <div className="video-wrapper py-5 d-flex justify-content-center align-items-center flex-column">
             <video
+              width="200px"
               ref={vid1}
               className="img-fluid"
               autoPlay
               muted
               onEnded={() => {
                 vid1.current.play();
-                setShowPagination(true);
               }}
             >
-              <source src={"./Assets/Page 1.mp4"} type="video/mp4" />
+              <source src={"./Assets/Tangled Mind_2_1.mp4"} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
+            <p className="mb-0 text-white text-nowrap">
+              I'm not sure if I can still remember
+            </p>
+          </div>
+
+          <div className="tangled3-wrapper py-5 d-flex justify-content-center align-items-center flex-column">
+            <img
+              className="leaf-gif"
+              src="./Assets/Leaf-unscreen.gif"
+              alt="leaf"
+            />
+            <img
+              className="tangledmind3"
+              src="./Assets/TangledMind3.png"
+              alt="tangledmind3"
+            />
           </div>
 
           <div className="leafs-wrapper">
@@ -201,7 +207,7 @@ const Vivid = ({
             <video
               ref={vid5}
               poster={"./Assets/loading.gif"}
-              src={"./Assets/page-5.mp4"}
+              src={"./Assets/Page-5.mp4"}
               className="img-fluid"
               autoPlay
               muted
