@@ -1,6 +1,6 @@
 import Menu from "./menu";
 
-const LandingPage2 = ({ pageToShow, handleStartCue }) => {
+const LandingPage2 = ({ pageToShow, handleStartCue, setCurrentPage }) => {
   switch (pageToShow) {
     case 0:
       return (
@@ -67,7 +67,7 @@ const LandingPage2 = ({ pageToShow, handleStartCue }) => {
         </div>
       );
     case 2:
-      return <Menu />;
+      return <Menu setCurrentPage={setCurrentPage} />;
   }
 };
 

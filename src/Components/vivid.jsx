@@ -2,6 +2,8 @@ import Menu2 from "./menu2";
 import Pagination from "./pagination";
 import { useRef } from "react";
 import { motion } from "framer-motion";
+import Navbar2 from "./navbar2";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const Vivid = ({
   currentPage,
@@ -13,7 +15,11 @@ const Vivid = ({
   setShowPagination,
   page1Show,
   setPage1Show,
+  pageToShow,
+  handleStartCue,
 }) => {
+  const navigate = useNavigate();
+
   const pagination = (
     <Pagination
       setCurrentPage={setCurrentPage}
@@ -40,7 +46,10 @@ const Vivid = ({
   const hamburger = (
     <div className="w-100 hamburger-wrapper">
       <img
-        onClick={() => setCurrentPage(0)}
+        onClick={() => {
+          setCurrentPage(0);
+          setPageToShow(2);
+        }}
         src="./Assets/hamburger.png"
         alt="hamburger"
         width="100px"
@@ -58,7 +67,45 @@ const Vivid = ({
 
   switch (currentPage) {
     case 0:
-      return <Menu2 setCurrentPage={setCurrentPage} />;
+      let output;
+
+      switch (pageToShow) {
+        case 0:
+          navigate("/");
+
+        case 1:
+          output = (
+            <div className="start-cue">
+              <video
+                id="startCue"
+                className="img-fluid"
+                onClick={handleStartCue}
+              >
+                <source
+                  src={"./Assets/1 Start_Visual Cues.mp4"}
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+              <p id="start-cue-center">.</p>
+            </div>
+          );
+          break;
+
+        case 2:
+          output = <Menu2 setCurrentPage={setCurrentPage} />;
+          break;
+      }
+      return (
+        <>
+          <Navbar2
+            disabledVivid={false}
+            setPageToShow={setPageToShow}
+            pageToShow={pageToShow}
+          />
+          {output}
+        </>
+      );
 
     case 1:
       return (

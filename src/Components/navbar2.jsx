@@ -1,12 +1,18 @@
 const Navbar2 = ({ disabledVivid, setPageToShow, pageToShow }) => {
   return (
     <div>
-      <nav className="navbar p-0 d-flex justify-content-center align-items-center">
+      <nav
+        className={
+          pageToShow == 1 || pageToShow == 2
+            ? "navbar-with-bg p-0 d-flex justify-content-center align-items-center"
+            : "navbar p-0 d-flex justify-content-center align-items-center"
+        }
+      >
         <div className="row w-100">
           <div className="col-4 d-flex justify-content-center align-items-center">
             <a
               className="nav-item nav-link text-secondary text-nowrap"
-              href="#"
+              href="/"
             >
               Keith Dela Cruz
             </a>
@@ -32,7 +38,9 @@ const Navbar2 = ({ disabledVivid, setPageToShow, pageToShow }) => {
                 <span className={pageToShow == 1 ? "arrow-down" : ""}></span>
               </a>
               <a
-                onClick={() => setPageToShow(2)}
+                onClick={() => {
+                  setPageToShow(2);
+                }}
                 style={
                   disabledVivid
                     ? { color: "#F39D47", opacity: 0.5 }

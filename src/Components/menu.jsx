@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
-const Menu = () => {
+const Menu = ({ setCurrentPage }) => {
   const navigate = useNavigate();
   const [panels] = useState([
     {
@@ -127,7 +127,10 @@ const Menu = () => {
                   </div>
                   <div className="panel-wrapper">
                     <img
-                      onClick={() => handleMenuClick(panel.enabled)}
+                      onClick={() => {
+                        handleMenuClick(panel.enabled);
+                        setCurrentPage(1);
+                      }}
                       src={panel.imgLink}
                       alt=""
                       width="200px"

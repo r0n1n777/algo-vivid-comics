@@ -10,6 +10,7 @@ const Home = ({
   pageToShow,
   disabledVivid,
   isNavbar2,
+  setCurrentPage,
 }) => {
   return (
     <div>
@@ -24,7 +25,11 @@ const Home = ({
       )}
 
       {isLandingPage2 ? (
-        <LandingPage2 pageToShow={pageToShow} handleStartCue={handleStartCue} />
+        <LandingPage2
+          pageToShow={pageToShow}
+          handleStartCue={handleStartCue}
+          setCurrentPage={setCurrentPage}
+        />
       ) : (
         <LandingPage handleStartCue={handleStartCue} />
       )}

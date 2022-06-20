@@ -57,6 +57,7 @@ function App() {
                 isNavbar2={isNavbar2}
                 pageToShow={pageToShow}
                 disabledVivid={disabledVivid}
+                setCurrentPage={setCurrentPage}
               />
             }
           />
@@ -84,6 +85,9 @@ function App() {
                 setShowPagination={setShowPagination}
                 page1Show={page1Show}
                 setPage1Show={setPage1Show}
+                disabledVivid={disabledVivid}
+                pageToShow={pageToShow}
+                handleStartCue={handleStartCue}
               />
             }
           />
