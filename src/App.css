@@ -68,7 +68,13 @@ body{
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../public/Assets/Colors.jpg);
   background-size: cover;
   background-position: center;
+  filter: blur(20px);
   position: relative;
+  z-index: 0;
+
+
+
+
 }
 
 .landing-cover{
@@ -76,6 +82,12 @@ body{
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 170px;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ 
+
 }
 
 .landing-cover h1{
@@ -144,8 +156,10 @@ body{
   background: #FFBB01;
   border-radius: 50%;
   position:absolute;
-  bottom: 0;
-  margin-bottom: -2rem;
+  z-index: 98;
+  margin-top: -7.5rem;
+  
+
 }
 
 .view-now p, .view-now-2 p{

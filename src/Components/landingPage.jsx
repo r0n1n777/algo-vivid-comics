@@ -5,23 +5,27 @@ const LandingPage = ({ handleStartCue }) => {
 
   return (
     <div>
-      <div className="container-fluid landing p-0 pt-5">
+      <div className="container-fluid position-relative p-0">
+        <div className="landing p-0 pt-5"></div>
         <div className="landing-cover w-100 h-100">
           <div className="title text-white m-3 m-md-5 mt-5">
             <h1 className="fw-bold">VIVID</h1>
             <p className="opacity-75">A hybrid form of animation and comics</p>
           </div>
-          <div className="view-now mx-4 d-flex justify-content-center align-items-center">
-            <p className="mb-0 text-white">View Now.</p>
-            <img
-              className="view-now-tail"
-              src={"./Assets/view-now-tail.png"}
-              alt=""
-            />
-          </div>
         </div>
       </div>
       <div className="container-fluid content pt-5">
+        <div
+          className="view-now mx-4
+           d-flex justify-content-center align-items-center"
+        >
+          <p className="mb-0 text-white">View Now.</p>
+          <img
+            className="view-now-tail"
+            src={"./Assets/view-now-tail.png"}
+            alt=""
+          />
+        </div>
         <div className="watch">
           <img className="img-fluid" src={"./Assets/01-Watch.png"} alt="" />
           <img

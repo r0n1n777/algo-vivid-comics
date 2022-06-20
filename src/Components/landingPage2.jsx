@@ -5,7 +5,8 @@ const LandingPage2 = ({ pageToShow, handleStartCue, setCurrentPage }) => {
     case 0:
       return (
         <div>
-          <div className="container-fluid landing p-0 pt-5">
+          <div className="container-fluid position-relative">
+            <div className="landing p-0 pt-5"></div>
             <div className="view-now-2-wrapper">
               <div className="view-now-2 mx-4 d-flex justify-content-center align-items-center">
                 <p className="mb-0 text-white">View Now.</p>
@@ -16,7 +17,6 @@ const LandingPage2 = ({ pageToShow, handleStartCue, setCurrentPage }) => {
                 />
               </div>
             </div>
-
             <div className="landing-cover w-100 h-100 d-flex align-items-start flex-column justify-content-center">
               <div className="col-3 d-flex justify-content-center align-items-center">
                 <div className="circle d-flex justify-content-center align-items-center">
