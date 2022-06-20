@@ -9,6 +9,7 @@ const Pagination = ({
   setEncircled,
   setPageToShow,
   setShowPagination,
+  setPage1Show,
 }) => {
   const defaultStyle = { cursor: "pointer", opacity: 0.5 };
   const enlargeStyle = { cursor: "pointer", transform: "scale(1.3,1.3)" };
@@ -36,6 +37,7 @@ const Pagination = ({
             setShowPagination(false);
             setCurrentPage(1);
             setEncircled(0);
+            setPage1Show(false);
           }}
           className={encircled === 1 ? "mb-0 set-encircled" : "mb-0"}
         >

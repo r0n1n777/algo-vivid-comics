@@ -3,7 +3,7 @@ import Pagination from "./pagination";
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import Navbar2 from "./navbar2";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Vivid = ({
   currentPage,
@@ -15,6 +15,7 @@ const Vivid = ({
   setShowPagination,
   page1Show,
   setPage1Show,
+
   pageToShow,
   handleStartCue,
 }) => {
@@ -28,6 +29,7 @@ const Vivid = ({
       setEncircled={setEncircled}
       setPageToShow={setPageToShow}
       setShowPagination={setShowPagination}
+      setPage1Show={setPage1Show}
     />
   );
 
@@ -72,6 +74,7 @@ const Vivid = ({
       switch (pageToShow) {
         case 0:
           navigate("/");
+          break;
 
         case 1:
           output = (
@@ -93,8 +96,15 @@ const Vivid = ({
           break;
 
         case 2:
-          output = <Menu2 setCurrentPage={setCurrentPage} />;
+          output = (
+            <Menu2
+              setCurrentPage={setCurrentPage}
+              setPage1Show={setPage1Show}
+            />
+          );
           break;
+        default:
+          console.log("Error, invalid page provided!");
       }
       return (
         <>
@@ -110,6 +120,7 @@ const Vivid = ({
     case 1:
       return (
         <div className="page">
+          {console.log(page1Show)}
           {setTimeout(() => {
             setPage1Show(true);
             setEncircled(2);
@@ -128,10 +139,7 @@ const Vivid = ({
                 vid1.current.play();
               }}
             >
-              <source
-                src={"./Assets/Page1-Panel1-compressed.mp4"}
-                type="video/mp4"
-              />
+              <source src={"./Assets/Page1-Panel1.mp4"} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             <p className="mb-0 text-white text-nowrap">
@@ -182,7 +190,7 @@ const Vivid = ({
         <div className="page">
           {showPagination && scroll}
           {hamburger}
-          <div className="wrapper">
+          <div className="wrapper position-relative">
             <video
               ref={vid2}
               poster={"./Assets/loading.gif"}
@@ -196,6 +204,7 @@ const Vivid = ({
                 setEncircled(3);
               }}
             ></video>
+            <div className="black-hider"></div>
           </div>
           {showPagination && pagination}
         </div>
@@ -227,7 +236,7 @@ const Vivid = ({
       return (
         <div className="page">
           {showPagination && scroll}
-          <div className="wrapper">
+          <div className="wrapper position-relative">
             {hamburger}
             <video
               ref={vid4}
@@ -242,6 +251,7 @@ const Vivid = ({
                 setEncircled(5);
               }}
             ></video>
+            <div className="black-hider"></div>
           </div>
           {showPagination && pagination}
         </div>
@@ -251,7 +261,7 @@ const Vivid = ({
         <div className="page">
           {showPagination && scroll}
 
-          <div className="wrapper">
+          <div className="wrapper position-relative">
             {hamburger}
             <video
               ref={vid5}
@@ -266,6 +276,7 @@ const Vivid = ({
                 setEncircled(6);
               }}
             ></video>
+            <div className="black-hider"></div>
           </div>
           {showPagination && pagination}
         </div>
@@ -274,7 +285,7 @@ const Vivid = ({
       return (
         <div className="page">
           {showPagination && scroll}
-          <div className="wrapper">
+          <div className="wrapper position-relative">
             {hamburger}
             <video
               ref={vid6}
@@ -297,7 +308,7 @@ const Vivid = ({
       return (
         <div className="page">
           {showPagination && scroll}
-          <div className="wrapper">
+          <div className="wrapper position-relative">
             {hamburger}
             <video
               ref={vid7}
@@ -312,6 +323,7 @@ const Vivid = ({
                 vid7.current.play();
               }}
             ></video>
+            <div className="black-hider"></div>
           </div>
 
           <h5 className="the-end text-center py-5">

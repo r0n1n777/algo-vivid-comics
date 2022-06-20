@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-const Menu2 = ({ setCurrentPage }) => {
+const Menu2 = ({ setCurrentPage, setPage1Show }) => {
   const [panels] = useState([
     {
       id: 1,
@@ -80,6 +80,7 @@ const Menu2 = ({ setCurrentPage }) => {
                     <img
                       onClick={() => {
                         handleMenuClick(panel.id);
+                        setPage1Show(false);
                       }}
                       src={panel.imgLink}
                       alt=""
