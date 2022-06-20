@@ -5,7 +5,7 @@ const LandingPage = ({ handleStartCue }) => {
 
   return (
     <div>
-      <div className="container-fluid landing p-0">
+      <div className="container-fluid landing p-0 pt-5">
         <div className="landing-cover w-100 h-100">
           <div className="title text-white m-3 m-md-5 mt-5">
             <h1 className="fw-bold">VIVID</h1>

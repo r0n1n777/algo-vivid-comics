@@ -1,7 +1,6 @@
 const Navbar = ({ disabledVivid }) => {
   return (
     <div>
-      <div className="nav-copy"></div>
       <nav className="navbar p-0 d-flex justify-content-center align-items-center">
         <div className="row w-100">
           <div className="col-4 d-flex justify-content-center align-items-center">
@@ -14,11 +13,11 @@ const Navbar = ({ disabledVivid }) => {
           </div>
           <div className="col-8 d-flex justify-content-end align-items-center">
             <div className="navbar-nav d-flex flex-row justify-content-center align-items-center">
-              <a className="nav-item nav-link mx-2 mx-md-3" href="/">
+              <a className="nav-item nav-link" href="/">
                 HOME
               </a>
               <a
-                className="nav-item nav-link mx-2 mx-md-3"
+                className="nav-item nav-link"
                 onClick={() =>
                   document
                     .getElementById("start-cue-center")
@@ -35,8 +34,8 @@ const Navbar = ({ disabledVivid }) => {
                 }
                 className={
                   disabledVivid
-                    ? "nav-item nav-link mx-2 mx-md-3 disabled"
-                    : "nav-item nav-link mx-2 mx-md-3"
+                    ? "nav-item nav-link disabled"
+                    : "nav-item nav-link"
                 }
                 href="#"
               >

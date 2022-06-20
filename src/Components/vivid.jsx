@@ -2,7 +2,6 @@ import Menu2 from "./menu2";
 import Pagination from "./pagination";
 import { useRef } from "react";
 import { motion } from "framer-motion";
-import { hasFormSubmit } from "@testing-library/user-event/dist/utils";
 
 const Vivid = ({
   currentPage,
@@ -12,6 +11,8 @@ const Vivid = ({
   setPageToShow,
   showPagination,
   setShowPagination,
+  page1Show,
+  setPage1Show,
 }) => {
   const pagination = (
     <Pagination
@@ -37,7 +38,7 @@ const Vivid = ({
   );
 
   const hamburger = (
-    <div className="container-fluid hamburger-wrapper d-flex justify-content-start align-items-center">
+    <div className="w-100 hamburger-wrapper">
       <img
         onClick={() => setCurrentPage(0)}
         src="./Assets/hamburger.png"
@@ -62,10 +63,15 @@ const Vivid = ({
     case 1:
       return (
         <div className="page">
-          {showPagination && scroll}
+          {setTimeout(() => {
+            setPage1Show(true);
+            setEncircled(2);
+          }, 10000)}
+          {page1Show && scroll}
           {hamburger}
           <div className="video-wrapper py-5 d-flex justify-content-center align-items-center flex-column">
             <video
+              poster={"./Assets/loading.gif"}
               width="200px"
               ref={vid1}
               className="img-fluid"
@@ -75,27 +81,26 @@ const Vivid = ({
                 vid1.current.play();
               }}
             >
-              <source src={"./Assets/Tangled Mind_2_1.mp4"} type="video/mp4" />
+              <source
+                src={"./Assets/Page1-Panel1-compressed.mp4"}
+                type="video/mp4"
+              />
               Your browser does not support the video tag.
             </video>
             <p className="mb-0 text-white text-nowrap">
               I'm not sure if I can still remember
             </p>
           </div>
-
           <div className="tangled3-wrapper py-5 d-flex justify-content-center align-items-center flex-column">
-            <img
-              className="leaf-gif"
-              src="./Assets/Leaf-unscreen.gif"
-              alt="leaf"
-            />
-            <img
-              className="tangledmind3"
-              src="./Assets/TangledMind3.png"
-              alt="tangledmind3"
-            />
+            <div className="door"></div>
+            <video className="img-fluid page1-panel2" autoPlay muted loop>
+              <source
+                src={"./Assets/Page1-Panel2-compressed.mp4"}
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
           </div>
-
           <div className="leafs-wrapper">
             <div className="leafs">
               <img src="./Assets/Leaf_em.png" alt="" width="150px" />
@@ -103,28 +108,25 @@ const Vivid = ({
               <img src="./Assets/Leaf_eo.png" alt="" width="250px" />
               <img src="./Assets/Leaf_ep.png" alt="" width="150px" />
             </div>
-            <p className="text-white text-center">
+            <p className="text-white text-center px-3">
               or when I last took a glance of my own reflection
             </p>
-            <div className="cover-wrapper text-white d-flex justify-content-center align-items-center flex-column">
-              <img className="img-fluid" src="./Assets/Cover.png" alt="" />
-              <p className="first-text">I don't know why</p>
-              <div className="grey-background align-self-start">
-                <p className="mb-0">I'm suddenly thinking about it</p>
-              </div>
+            <div className="cover-wrapper">
+              <img
+                src={"./Assets/Panel 3 Page 1.jpg"}
+                className="img-fluid"
+                alt=""
+              />
             </div>
-            <p className="text-white mx-5 mt-3">. . .</p>
           </div>
           <div className="A-panel-wrapper text-white">
-            <p>It's been so long</p>
             <img
-              src="./Assets/A-Panel1-2_w@2x (1).png"
+              src="./Assets/Panel 4 Page 1.jpg"
               className="img-fluid"
               alt=""
             />
           </div>
-
-          {pagination}
+          {page1Show && pagination}
         </div>
       );
 
@@ -259,6 +261,7 @@ const Vivid = ({
               muted
               onEnded={() => {
                 setShowPagination(true);
+                setEncircled(1);
                 vid7.current.play();
               }}
             ></video>

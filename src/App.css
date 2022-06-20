@@ -30,24 +30,20 @@ body{
   min-height: 100vh;
 }
 
-.nav-copy{
-  height: 14vh;
-}
+
 
 .navbar{
-  background-image: url(../public/Assets/Colors@2x\(edited1\).png);
-  background-position: center;
-  background-size: 100% 100%;
-  height: 15vh;
-  position: fixed !important;
   width: 40vw;
   z-index: 99;
-  top: 0;
+  position: absolute;
+  top: 2rem;
 
 }
 .navbar-nav a{
   color: #F39D47;
+  margin: 0 1.5rem;
 }
+
 
 .landing{
   height: 85vh;
@@ -156,16 +152,12 @@ body{
   background: #FFBB01;
   border-radius: 50%;
   position:absolute;
-  top: 3.5rem;
+  top: 6rem;
   right: 4rem;
  
 }
 
-.view-now-2-wrapper{
-  position: sticky;
-  top: 2rem;
-  z-index: 99 ;
-}
+
 
 .view-now-2-tail{
   position: absolute;
@@ -194,7 +186,7 @@ body{
   width: 85px;
   height: 85px;
   /* UI Properties */
-  border: 2px solid rgba(255,172,6,.5);
+  border: 3.5px solid rgba(255,172,6,.5);
   border-radius: 100%;
 }
 
@@ -296,12 +288,22 @@ body{
   font-family: NothingYouCouldDo;
 }
 
-.tangledmind3{
+.door {
   position: absolute;
+  width: 39.5%;
+  height: 350px;
+  background: #A50B0E;
+  top: 0;
 }
-.leaf-gif{
-  z-index: 2;
+
+.tangled3-wrapper{
+  position: relative;
 }
+
+.page1-panel2{
+  padding-top: 300px;
+}
+
 
 
 .leafs{
@@ -365,6 +367,9 @@ body{
 .pagination h5{
   color: #39D0EB;
 }
+.pagination{
+  z-index: 99;
+}
 
 .the-end{
   color: #BC1D1D;
@@ -372,17 +377,18 @@ body{
 }
 
 .set-encircled{
-  border: 1px solid #39D0EB;
-  padding: 3px 7px;
+  border: 2px solid #39D0EB;
+  padding: 4px 8px;
   border-radius: 100%;
   transition: .5s;
+  opacity: 1 !important;
 }
 
 .scroll-button{
-  position: sticky;
-  top: 60vh;
-  right: 5rem;
-  z-index: 99;
+  position: fixed;
+ bottom: 2rem;
+  right: 0rem;
+  z-index: 98;
   
 }
 .scroll-button img{
@@ -394,14 +400,14 @@ body{
 }
 
 .hamburger-wrapper{
-  position: sticky;
-  top: 0;
-  z-index: 99;
+  position: fixed;
+  top: 0rem;
+  left: 0rem;
+  z-index: 98;
+ 
 }
 
-.hamburger{
-  margin-right: 20rem;
-}
+
 
 
 
@@ -455,6 +461,12 @@ body{
 
   }
 
+  .door{
+    width: 236px;
+  }
+
+  
+
   
   
 }
@@ -484,4 +496,24 @@ body{
     height: 3.5rem;
   }
 
+  .page1-panel2{
+    width: 100%;
+    padding-top: 250px;
+  }
+
+  .door{
+    width: 39.5%;
+  }
+
+  
+
+}
+
+@media  screen and (max-width: 425px) {
+  .navbar a{
+    font-size: 10px;
+    margin: 0 10px;
+  }
+
+  
 }

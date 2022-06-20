@@ -1,7 +1,6 @@
 const Navbar2 = ({ disabledVivid, setPageToShow, pageToShow }) => {
   return (
     <div>
-      <div className="nav-copy"></div>
       <nav className="navbar p-0 d-flex justify-content-center align-items-center">
         <div className="row w-100">
           <div className="col-4 d-flex justify-content-center align-items-center">
@@ -16,7 +15,7 @@ const Navbar2 = ({ disabledVivid, setPageToShow, pageToShow }) => {
             <div className="navbar-nav d-flex flex-row justify-content-center align-items-center">
               <a
                 onClick={() => setPageToShow(0)}
-                className="nav-item nav-link mx-2 mx-md-3 d-flex justify-content-center align-items-center"
+                className="nav-item nav-link d-flex justify-content-center align-items-center"
                 href="#"
               >
                 HOME
@@ -24,7 +23,7 @@ const Navbar2 = ({ disabledVivid, setPageToShow, pageToShow }) => {
               </a>
 
               <a
-                className="nav-item nav-link mx-2 mx-md-3 d-flex justify-content-center align-items-center"
+                className="nav-item nav-link d-flex justify-content-center align-items-center"
                 onClick={() => {
                   setPageToShow(1);
                 }}
@@ -41,8 +40,8 @@ const Navbar2 = ({ disabledVivid, setPageToShow, pageToShow }) => {
                 }
                 className={
                   disabledVivid
-                    ? "nav-item nav-link d-flex justify-content-center align-items-center mx-2 mx-md-3 disabled"
-                    : "nav-item nav-link d-flex justify-content-center align-items-center mx-2 mx-md-3"
+                    ? "nav-item nav-link d-flex justify-content-center align-items-center disabled"
+                    : "nav-item nav-link d-flex justify-content-center align-items-center"
                 }
                 href="#"
               >

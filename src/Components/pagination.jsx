@@ -10,7 +10,7 @@ const Pagination = ({
   setPageToShow,
   setShowPagination,
 }) => {
-  const defaultStyle = { cursor: "pointer" };
+  const defaultStyle = { cursor: "pointer", opacity: 0.5 };
   const enlargeStyle = { cursor: "pointer", transform: "scale(1.3,1.3)" };
   const navigate = useNavigate();
 
@@ -35,8 +35,9 @@ const Pagination = ({
           onClick={() => {
             setShowPagination(false);
             setCurrentPage(1);
+            setEncircled(0);
           }}
-          className="mb-0 1"
+          className={encircled === 1 ? "mb-0 set-encircled" : "mb-0"}
         >
           1
         </h5>

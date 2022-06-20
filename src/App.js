@@ -15,6 +15,7 @@ function App() {
   const [encircled, setEncircled] = useState(0);
   const [isLoading, setLoading] = useState(true);
   const [showPagination, setShowPagination] = useState(false);
+  const [page1Show, setPage1Show] = useState(false);
 
   const navigate = useNavigate();
 
@@ -81,6 +82,8 @@ function App() {
                 setPageToShow={setPageToShow}
                 showPagination={showPagination}
                 setShowPagination={setShowPagination}
+                page1Show={page1Show}
+                setPage1Show={setPage1Show}
               />
             }
           />
