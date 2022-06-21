@@ -27,7 +27,7 @@ const Pagination = ({
     <motion.div
       initial={{ x: -100 }}
       animate={{ x: 0 }}
-      className="contaier-fluid d-flex justify-content-center align-items-center py-5"
+      className="contaier-fluid d-flex justify-content-center align-items-center py-0 py-sm-5"
     >
       <div className="pagination d-flex justify-content-around align-items-center w-50">
         <h5

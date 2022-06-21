@@ -120,7 +120,6 @@ const Vivid = ({
     case 1:
       return (
         <div className="page">
-          {console.log(page1Show)}
           {setTimeout(() => {
             setPage1Show(true);
             setEncircled(2);

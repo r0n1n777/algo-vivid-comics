@@ -442,8 +442,11 @@ body{
   height: 3rem;
   position: absolute;
   z-index: 100;
-  bottom: 1rem;
-  background: black;
+  bottom: 6rem;
+ background: black;
+}
+.page .wrapper{
+  padding: 5rem 0;
 }
 
 
@@ -542,6 +545,9 @@ body{
 
   .door{
     width: 39.5%;
+  }
+  .black-hider{
+    bottom: 5rem;
   }
 
   
