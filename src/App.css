@@ -26,8 +26,9 @@ body{
 }
 
 .container-root{
-  width: 40vw;
+  width: 623px;
   min-height: 100vh;
+  position: relative;
 }
 
 
@@ -409,7 +410,7 @@ body{
 
 .set-encircled{
   border: 2px solid #39D0EB;
-  padding: 4px 8px;
+  padding: 4px 9.5px;
   border-radius: 100%;
   transition: .5s;
   opacity: 1 !important;
@@ -459,7 +460,7 @@ body{
 @media screen and (max-width: 768px){
 
 
-  .container-root, .leafs{
+ .leafs{
     width: 100%;
   }
 

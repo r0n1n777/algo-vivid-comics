@@ -4,7 +4,7 @@ const Navbar2 = ({ disabledVivid, setPageToShow, pageToShow }) => {
       <nav
         className={
           pageToShow == 1 || pageToShow == 2
-            ? "navbar-with-bg p-0 d-flex justify-content-center align-items-center"
+            ? "navbar-with-bg w-100 p-0 d-flex justify-content-center align-items-center"
             : "navbar p-0 d-flex justify-content-center align-items-center"
         }
       >

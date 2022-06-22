@@ -330,7 +330,7 @@ const Vivid = ({
           </h5>
           <img className="img-fluid" src={"./Assets/Cover.png"} alt="" />
 
-          {showPagination && pagination}
+          {pagination}
         </div>
       );
     default:
