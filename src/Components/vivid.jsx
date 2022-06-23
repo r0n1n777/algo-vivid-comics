@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import Navbar2 from "./navbar2";
 import { useNavigate } from "react-router-dom";
+import Modal from "./modal";
 
 const Vivid = ({
   currentPage,
@@ -15,9 +16,12 @@ const Vivid = ({
   setShowPagination,
   page1Show,
   setPage1Show,
-
   pageToShow,
   handleStartCue,
+  showModal,
+  setShowModal,
+  vidInModal,
+  setVidInModal,
 }) => {
   const navigate = useNavigate();
 
@@ -180,16 +184,56 @@ const Vivid = ({
               alt=""
             />
           </div>
-          {page1Show && pagination}
+          {pagination}
         </div>
       );
 
     case 2:
       return (
-        <div className="page">
+        <div className="page page-2">
+          <Modal
+            setShowModal={setShowModal}
+            vidInModal={vidInModal}
+            showModal={showModal}
+          />
           {showPagination && scroll}
           {hamburger}
           <div className="wrapper position-relative">
+            <div
+              className="box-1"
+              onClick={() => {
+                setVidInModal("./Assets/Page 2Panel2_1.mp4");
+                setShowModal(true);
+              }}
+            ></div>
+            <div
+              className="box-2"
+              onClick={() => {
+                setVidInModal("./Assets/Page 2Panel 1.mp4");
+                setShowModal(true);
+              }}
+            ></div>
+            <div
+              className="box-3"
+              onClick={() => {
+                setVidInModal("./Assets/Page 2Panel3_1.mp4");
+                setShowModal(true);
+              }}
+            ></div>
+            <div
+              className="box-4"
+              onClick={() => {
+                setVidInModal("./Assets/Page 2Panel2.mp4");
+                setShowModal(true);
+              }}
+            ></div>
+            <div
+              className="box-5"
+              onClick={() => {
+                setVidInModal("./Assets/Page 2Panel 5_1.mp4");
+                setShowModal(true);
+              }}
+            ></div>
             <video
               ref={vid2}
               poster={"./Assets/loading.gif"}
@@ -205,7 +249,7 @@ const Vivid = ({
             ></video>
             <div className="black-hider"></div>
           </div>
-          {showPagination && pagination}
+          {pagination}
         </div>
       );
     case 3:
@@ -228,7 +272,7 @@ const Vivid = ({
               }}
             ></video>
           </div>
-          {showPagination && pagination}
+          {pagination}
         </div>
       );
     case 4:
@@ -252,7 +296,7 @@ const Vivid = ({
             ></video>
             <div className="black-hider"></div>
           </div>
-          {showPagination && pagination}
+          {pagination}
         </div>
       );
     case 5:
@@ -277,15 +321,20 @@ const Vivid = ({
             ></video>
             <div className="black-hider"></div>
           </div>
-          {showPagination && pagination}
+          {pagination}
         </div>
       );
     case 6:
       return (
-        <div className="page">
+        <div className="page page-6">
           {showPagination && scroll}
           <div className="wrapper position-relative">
             {hamburger}
+            <div className="box-1"></div>
+            <div className="box-2"></div>
+            <div className="box-3"></div>
+            <div className="box-4"></div>
+            <div className="box-5"></div>
             <video
               ref={vid6}
               poster={"./Assets/loading.gif"}
@@ -300,7 +349,7 @@ const Vivid = ({
               }}
             ></video>
           </div>
-          {showPagination && pagination}
+          {pagination}
         </div>
       );
     case 7:

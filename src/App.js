@@ -16,6 +16,8 @@ function App() {
   const [isLoading, setLoading] = useState(true);
   const [showPagination, setShowPagination] = useState(false);
   const [page1Show, setPage1Show] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [vidInModal, setVidInModal] = useState("");
 
   const navigate = useNavigate();
 
@@ -88,6 +90,10 @@ function App() {
                 disabledVivid={disabledVivid}
                 pageToShow={pageToShow}
                 handleStartCue={handleStartCue}
+                showModal={showModal}
+                setShowModal={setShowModal}
+                vidInModal={vidInModal}
+                setVidInModal={setVidInModal}
               />
             }
           />

@@ -1,6 +1,7 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Pagination = ({
   setCurrentPage,
@@ -23,11 +24,32 @@ const Pagination = ({
   const page6 = useRef();
   const page7 = useRef();
 
+  const showHideVariant = {
+    hidden: { opacity: 0, x: -300 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { type: "spring", stiffness: 50, duration: 0.3 },
+    },
+  };
+  const control = useAnimation();
+  const [viewRef, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
+
   return (
     <motion.div
-      initial={{ x: -100 }}
-      animate={{ x: 0 }}
-      className="contaier-fluid d-flex justify-content-center align-items-center py-3 py-sm-5"
+      ref={viewRef}
+      initial="hidden"
+      variants={showHideVariant}
+      animate={control}
+      className="contaier-fluid d-flex justify-content-center align-items-center py-5"
     >
       <div className="pagination d-flex justify-content-around align-items-center w-50">
         <h5
