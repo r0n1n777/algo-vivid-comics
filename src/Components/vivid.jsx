@@ -327,14 +327,49 @@ const Vivid = ({
     case 6:
       return (
         <div className="page page-6">
+          <Modal
+            setShowModal={setShowModal}
+            vidInModal={vidInModal}
+            showModal={showModal}
+          />
           {showPagination && scroll}
           <div className="wrapper position-relative">
             {hamburger}
-            <div className="box-1"></div>
-            <div className="box-2"></div>
-            <div className="box-3"></div>
-            <div className="box-4"></div>
-            <div className="box-5"></div>
+            <div
+              className="box-1"
+              onClick={() => {
+                setVidInModal("./Assets/Page6 Panel 1_compressed.mp4");
+                setShowModal(true);
+              }}
+            ></div>
+            <div
+              className="box-2"
+              onClick={() => {
+                setVidInModal("./Assets/Page6 Panel 2_compressed.mp4");
+                setShowModal(true);
+              }}
+            ></div>
+            <div
+              className="box-3"
+              onClick={() => {
+                setVidInModal("./Assets/Page6 Panel 3_compressed.mp4");
+                setShowModal(true);
+              }}
+            ></div>
+            <div
+              className="box-4"
+              onClick={() => {
+                setVidInModal("./Assets/Page6 Panel 4_compressed.mp4");
+                setShowModal(true);
+              }}
+            ></div>
+            <div
+              className="box-5"
+              onClick={() => {
+                setVidInModal("./Assets/Page6 Panel 5_compressed.mp4");
+                setShowModal(true);
+              }}
+            ></div>
             <video
               ref={vid6}
               poster={"./Assets/loading.gif"}

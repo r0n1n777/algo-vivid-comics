@@ -455,7 +455,6 @@ body{
   position: absolute;
   z-index: 99;
   cursor: pointer;
-  border: 1px solid red;
 
 }
 
@@ -492,8 +491,36 @@ body{
 }
 
 .page-6 .box-1{
-  width: 100%;
+  left: 15%;
+  top: 10%;
+  width: 70%;
+  height: 23%;
+}
+.page-6 .box-2{
+  top: 35%;
+  left: 15%;
+  width: 25%;
   height: 25%;
+}
+.page-6 .box-3{
+  top: 35%;
+  left: 40%;
+  width: 23%;
+  height: 25%;
+}
+
+.page-6 .box-4{
+  top: 35%;
+  left: 63%;
+  width: 23%;
+  height: 25%;
+}
+
+.page-6 .box-5{
+  left: 15%;
+  top: 62%;
+  width: 70%;
+  height: 23%;
 }
 
 .backdrop{
@@ -508,7 +535,6 @@ body{
 
 .modal-wrapper{
   position: relative !important;
- 
   height: 90%;
  
 }
