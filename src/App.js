@@ -15,7 +15,6 @@ function App() {
   const [encircled, setEncircled] = useState(0);
   const [isLoading, setLoading] = useState(true);
   const [showPagination, setShowPagination] = useState(false);
-  const [page1Show, setPage1Show] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [vidInModal, setVidInModal] = useState("");
 
@@ -85,8 +84,6 @@ function App() {
                 setPageToShow={setPageToShow}
                 showPagination={showPagination}
                 setShowPagination={setShowPagination}
-                page1Show={page1Show}
-                setPage1Show={setPage1Show}
                 disabledVivid={disabledVivid}
                 pageToShow={pageToShow}
                 handleStartCue={handleStartCue}

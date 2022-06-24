@@ -10,10 +10,9 @@ const Pagination = ({
   setEncircled,
   setPageToShow,
   setShowPagination,
-  setPage1Show,
 }) => {
   const defaultStyle = { cursor: "pointer", opacity: 0.5 };
-  const enlargeStyle = { cursor: "pointer", transform: "scale(1.3,1.3)" };
+  const enlargeStyle = { cursor: "pointer", transform: "scale(1.6,1.6)" };
   const navigate = useNavigate();
 
   const page1 = useRef();
@@ -43,6 +42,12 @@ const Pagination = ({
     }
   }, [control, inView]);
 
+  const handlePaginationClick = (page) => {
+    setShowPagination(false);
+    setEncircled(0);
+    setCurrentPage(page);
+  };
+
   return (
     <motion.div
       ref={viewRef}
@@ -56,10 +61,7 @@ const Pagination = ({
           ref={page1}
           style={currentPage === 1 ? enlargeStyle : defaultStyle}
           onClick={() => {
-            setShowPagination(false);
-            setCurrentPage(1);
-            setEncircled(0);
-            setPage1Show(false);
+            handlePaginationClick(1);
           }}
           className={encircled === 1 ? "mb-0 set-encircled" : "mb-0"}
         >
@@ -70,9 +72,7 @@ const Pagination = ({
           ref={page2}
           style={currentPage === 2 ? enlargeStyle : defaultStyle}
           onClick={() => {
-            setShowPagination(false);
-            setCurrentPage(2);
-            setEncircled(0);
+            handlePaginationClick(2);
           }}
           className={encircled === 2 ? "mb-0 set-encircled" : "mb-0"}
         >
@@ -84,9 +84,7 @@ const Pagination = ({
           ref={page3}
           style={currentPage === 3 ? enlargeStyle : defaultStyle}
           onClick={() => {
-            setShowPagination(false);
-            setCurrentPage(3);
-            setEncircled(0);
+            handlePaginationClick(3);
           }}
           className={encircled === 3 ? "mb-0 set-encircled" : "mb-0"}
         >
@@ -97,7 +95,6 @@ const Pagination = ({
           <img
             src="./Assets/Home Button.png"
             onClick={() => {
-              setShowPagination(false);
               navigate("/", { replace: true });
               setPageToShow(0);
             }}
@@ -110,9 +107,7 @@ const Pagination = ({
           ref={page4}
           style={currentPage === 4 ? enlargeStyle : defaultStyle}
           onClick={() => {
-            setShowPagination(false);
-            setCurrentPage(4);
-            setEncircled(0);
+            handlePaginationClick(4);
           }}
           className={encircled === 4 ? "mb-0 set-encircled" : "mb-0"}
         >
@@ -123,9 +118,7 @@ const Pagination = ({
           ref={page5}
           style={currentPage === 5 ? enlargeStyle : defaultStyle}
           onClick={() => {
-            setShowPagination(false);
-            setCurrentPage(5);
-            setEncircled(0);
+            handlePaginationClick(5);
           }}
           className={encircled === 5 ? "mb-0 set-encircled" : "mb-0"}
         >
@@ -136,9 +129,7 @@ const Pagination = ({
           ref={page6}
           style={currentPage === 6 ? enlargeStyle : defaultStyle}
           onClick={() => {
-            setShowPagination(false);
-            setCurrentPage(6);
-            setEncircled(0);
+            handlePaginationClick(6);
           }}
           className={encircled === 6 ? "mb-0 set-encircled" : "mb-0"}
         >
@@ -149,9 +140,7 @@ const Pagination = ({
           ref={page7}
           style={currentPage === 7 ? enlargeStyle : defaultStyle}
           onClick={() => {
-            setShowPagination(false);
-            setCurrentPage(7);
-            setEncircled(0);
+            handlePaginationClick(7);
           }}
           className={encircled === 7 ? "mb-0 set-encircled" : "mb-0"}
         >

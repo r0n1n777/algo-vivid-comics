@@ -6,8 +6,6 @@ const Modal = ({ setShowModal, vidInModal, showModal }) => {
     hidden: { opacity: 0, y: -200 },
   };
 
-  console.log(vidInModal);
-
   return (
     <AnimatePresence exitBeforeEnter>
       {showModal && (

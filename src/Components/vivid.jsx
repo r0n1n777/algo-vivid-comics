@@ -1,9 +1,10 @@
 import Menu2 from "./menu2";
 import Pagination from "./pagination";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Navbar2 from "./navbar2";
 import { useNavigate } from "react-router-dom";
+import { useInView } from "react-intersection-observer";
 import Modal from "./modal";
 
 const Vivid = ({
@@ -14,8 +15,6 @@ const Vivid = ({
   setPageToShow,
   showPagination,
   setShowPagination,
-  page1Show,
-  setPage1Show,
   pageToShow,
   handleStartCue,
   showModal,
@@ -33,7 +32,6 @@ const Vivid = ({
       setEncircled={setEncircled}
       setPageToShow={setPageToShow}
       setShowPagination={setShowPagination}
-      setPage1Show={setPage1Show}
     />
   );
 
@@ -50,7 +48,7 @@ const Vivid = ({
   );
 
   const hamburger = (
-    <div className="w-100 hamburger-wrapper">
+    <div className="w-100 hamburger-wrapper" style={{ cursor: "pointer" }}>
       <img
         onClick={() => {
           setCurrentPage(0);
@@ -63,6 +61,14 @@ const Vivid = ({
     </div>
   );
 
+  const modal = (
+    <Modal
+      setShowModal={setShowModal}
+      vidInModal={vidInModal}
+      showModal={showModal}
+    />
+  );
+
   const vid1 = useRef();
   const vid2 = useRef();
   const vid3 = useRef();
@@ -70,6 +76,18 @@ const Vivid = ({
   const vid5 = useRef();
   const vid6 = useRef();
   const vid7 = useRef();
+
+  const [elementRef, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      setShowPagination(true);
+    } else {
+      setShowPagination(false);
+    }
+  });
+
+  console.log(showPagination);
 
   switch (currentPage) {
     case 0:
@@ -103,7 +121,7 @@ const Vivid = ({
           output = (
             <Menu2
               setCurrentPage={setCurrentPage}
-              setPage1Show={setPage1Show}
+              setShowPagination={setShowPagination}
             />
           );
           break;
@@ -124,12 +142,10 @@ const Vivid = ({
     case 1:
       return (
         <div className="page">
-          {setTimeout(() => {
-            setPage1Show(true);
-            setEncircled(2);
-          }, 10000)}
-          {page1Show && scroll}
+          {showPagination && scroll}
           {hamburger}
+          {setEncircled(2)}
+
           <div className="video-wrapper py-5 d-flex justify-content-center align-items-center flex-column">
             <video
               poster={"./Assets/loading.gif"}
@@ -142,7 +158,7 @@ const Vivid = ({
                 vid1.current.play();
               }}
             >
-              <source src={"./Assets/Page1-Panel1.mp4"} type="video/mp4" />
+              <source src={"./Assets/Page1-Panel1_Trim.mp4"} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             <p className="mb-0 text-white text-nowrap">
@@ -179,6 +195,7 @@ const Vivid = ({
           </div>
           <div className="A-panel-wrapper text-white">
             <img
+              ref={elementRef}
               src="./Assets/Panel 4 Page 1.jpg"
               className="img-fluid"
               alt=""
@@ -191,11 +208,7 @@ const Vivid = ({
     case 2:
       return (
         <div className="page page-2">
-          <Modal
-            setShowModal={setShowModal}
-            vidInModal={vidInModal}
-            showModal={showModal}
-          />
+          {modal}
           {showPagination && scroll}
           {hamburger}
           <div className="wrapper position-relative">
@@ -257,7 +270,9 @@ const Vivid = ({
         <div className="page">
           {showPagination && scroll}
           {hamburger}
-          <div className="wrapper">
+          {modal}
+
+          <div className="wrapper position-relative">
             <video
               ref={vid3}
               poster={"./Assets/loading.gif"}
@@ -265,22 +280,36 @@ const Vivid = ({
               className="img-fluid"
               autoPlay
               muted
+              style={{ cursor: "pointer" }}
+              onClick={() => {
+                setVidInModal("./Assets/Page 3 Panel 1.mp4");
+                setShowModal(true);
+              }}
               onEnded={() => {
                 setShowPagination(true);
                 vid3.current.play();
                 setEncircled(4);
               }}
             ></video>
+            <div className="black-hider"></div>
           </div>
           {pagination}
         </div>
       );
     case 4:
       return (
-        <div className="page">
+        <div className="page page-4">
           {showPagination && scroll}
+          {modal}
           <div className="wrapper position-relative">
             {hamburger}
+            <div
+              className="box-1"
+              onClick={() => {
+                setVidInModal("./Assets/Page 4 Panel 1 Compressed.mp4");
+                setShowModal(true);
+              }}
+            ></div>
             <video
               ref={vid4}
               poster={"./Assets/loading.gif"}
@@ -327,11 +356,7 @@ const Vivid = ({
     case 6:
       return (
         <div className="page page-6">
-          <Modal
-            setShowModal={setShowModal}
-            vidInModal={vidInModal}
-            showModal={showModal}
-          />
+          {modal}
           {showPagination && scroll}
           <div className="wrapper position-relative">
             {hamburger}
