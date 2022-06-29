@@ -44,7 +44,6 @@ const VividTotourial = ({
       id: 2,
       video: (
         <video
-          poster={"./Assets/loading.gif"}
           style={videoStyle}
           className="img-fluid"
           autoPlay
@@ -60,7 +59,6 @@ const VividTotourial = ({
       id: 3,
       video: (
         <video
-          poster={"./Assets/loading.gif"}
           style={videoStyle}
           className="img-fluid"
           autoPlay
@@ -76,7 +74,6 @@ const VividTotourial = ({
       id: 4,
       video: (
         <video
-          poster={"./Assets/loading.gif"}
           style={videoStyle}
           className="img-fluid"
           autoPlay

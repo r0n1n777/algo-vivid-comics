@@ -4,10 +4,7 @@ const Navbar = ({ disabledVivid }) => {
       <nav className="navbar p-0 d-flex justify-content-center align-items-center">
         <div className="row w-100">
           <div className="col-4 d-flex justify-content-center align-items-center">
-            <a
-              className="nav-item nav-link text-secondary text-nowrap"
-              href="/"
-            >
+            <a className="nav-item client-name nav-link text-nowrap" href="/">
               Keith Dela Cruz
             </a>
           </div>

@@ -1,0 +1,15 @@
+{
+    "background_color": "#732A6F",
+    "description": "A hybrid form of animation and comics",
+    "display": "fullscreen",
+    "icons": [
+      {
+        "src": "favicon.ico",
+        "sizes": "192x192",
+        "type": "image/x-icon"
+      }
+    ],
+    "name": "VIVID - A hybrid form of animation and comics",
+    "short_name": "VIVID",
+    "start_url": "https://test-e280f.web.app/"
+  }

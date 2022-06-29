@@ -10,10 +10,7 @@ const Navbar2 = ({ disabledVivid, setPageToShow, pageToShow }) => {
       >
         <div className="row w-100">
           <div className="col-4 d-flex justify-content-center align-items-center">
-            <a
-              className="nav-item nav-link text-secondary text-nowrap"
-              href="/"
-            >
+            <a className="nav-item nav-link client-name text-nowrap" href="/">
               Keith Dela Cruz
             </a>
           </div>
