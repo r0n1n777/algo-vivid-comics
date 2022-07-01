@@ -1,12 +1,12 @@
 {
-    "background_color": "#732A6F",
+    "background_color": "#000000",
     "description": "A hybrid form of animation and comics",
     "display": "fullscreen",
     "icons": [
       {
-        "src": "favicon.ico",
+        "src": "app-logo.png",
         "sizes": "192x192",
-        "type": "image/x-icon"
+        "type": "image/png"
       }
     ],
     "name": "VIVID - A hybrid form of animation and comics",
