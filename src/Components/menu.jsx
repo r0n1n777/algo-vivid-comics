@@ -10,7 +10,7 @@ const Menu = ({ setCurrentPage }) => {
       pageNumber: "01",
       imgLink: "Assets/Page1_q.png",
       badge: (
-        <div className="viewable d-flex justify-content-center align-items-center">
+        <div className="viewable d-flex justify-content-center align-items-center text-nowrap">
           <p className="mb-0">View First.</p>
         </div>
       ),
@@ -133,7 +133,7 @@ const Menu = ({ setCurrentPage }) => {
                       }}
                       src={panel.imgLink}
                       alt=""
-                      width="200px"
+                      width="250px"
                     />
                     {panel.badge}
                   </div>
@@ -156,7 +156,7 @@ const Menu = ({ setCurrentPage }) => {
                 <p className="mb-0">PAGE</p>
               </div>
               <div className="panel-wrapper">
-                <img src="Assets/Page7_w.png" alt="" width="200px" />
+                <img src="Assets/Page7_w.png" alt="" width="250px" />
                 <div className="not-viewable d-flex justify-content-center align-items-center">
                   <p className="mb-0">Disabled</p>
                 </div>

@@ -84,7 +84,7 @@ const Menu2 = ({ setCurrentPage, setShowPagination }) => {
                       }}
                       src={panel.imgLink}
                       alt=""
-                      width="200px"
+                      width="250px"
                     />
                     {panel.badge}
                   </div>
@@ -113,7 +113,7 @@ const Menu2 = ({ setCurrentPage, setShowPagination }) => {
                   }}
                   src="Assets/Page7_w.png"
                   alt=""
-                  width="200px"
+                  width="250px"
                 />
               </div>
             </div>

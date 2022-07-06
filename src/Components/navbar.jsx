@@ -1,7 +1,7 @@
 const Navbar = ({ disabledVivid }) => {
   return (
     <div>
-      <nav className="navbar p-0 d-flex justify-content-center align-items-center">
+      <nav className="vivid-navbar p-0 d-flex justify-content-center align-items-center">
         <div className="row w-100">
           <div className="col-4 d-flex justify-content-center align-items-center">
             <a className="nav-item client-name nav-link text-nowrap" href="/">

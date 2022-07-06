@@ -23,36 +23,37 @@
 
 body{
   font-family: 'Sinkin', serif !important;
+  position: relative !important;
+}
+
+html{
+  background: black !important;
+
 }
 
 .container-root{
   width: 623px;
   min-height: 100vh;
-  position: relative;
 }
 
 
 
-.navbar{
+.vivid-navbar-with-bg{
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 3rem;
   z-index: 99;
-  position: absolute;
-  top: 1.5rem;
-
-  
-
-}
-
-.navbar-with-bg{
-  width: 40vw;
-  z-index: 99;
-  position: absolute;
-  top: 0rem;
-  background-image: url(../public/Assets/Colors@2x\(edited1\).png);
+  background: url(../public//Assets/Colors@2x\(edited1\).png);
+  background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% 100%;
-  height: 7rem;
-}
+  background-size: cover;
+  padding: 0 !important;
+  
+ }
+
+
 
 .client-name{
   color: #EEEEEE !important;
@@ -186,8 +187,9 @@ body{
   background: #FFBB01;
   border-radius: 50%;
   position:absolute;
-  top: 6rem;
+  top: 4rem;
   right: 4rem;
+  border: 1px solid red;
  
 }
 
@@ -244,7 +246,12 @@ body{
 
 .menu{
   min-height: 100vh;
-  position: relative;
+  position: absolute;
+  width: 70%;
+  left: 50%;
+  top: 33rem;
+  transform: translate(-50%, -50%);
+  margin: 5rem;
   margin-top: 8rem;
   border-radius: 2rem;
 }
@@ -566,22 +573,64 @@ body{
   cursor: pointer;
 }
 
-
-
-
-
-
-
-
-
-@media screen and (min-width: 768px){
+@media screen and (min-width: 769px){
   .modal-wrapper video{
     height: 75%;
+  }
+  
+  .vivid-navbar{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 3rem;
+   z-index: 99;
+   background: url(../public//Assets/Colors@2x\(edited1\).png);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   padding: 0;
+   
+  }
+  
+
+  .viewable{
+   
+    width: 6rem;
+    height: 6rem;
+  
+  }
+
+  .viewable p{
+    font-size: 13px;
+  }
+  .not-viewable p{
+    font-size: 10px;
+  }
+  
+
+  .not-viewable{
+    width: 5rem;
+    height: 5rem;
+
+  }
+  .menu .col-3 .circle{
+    width: 8rem;
+    height: 8rem;
   }
 }
 
 
 @media screen and (max-width: 768px){
+
+  .vivid-navbar{
+    width: 100%;
+    margin-top: 1.5rem;
+    position: absolute;
+    top: 0rem;
+    left: 0;
+    z-index: 99;
+  }
 
   .modal-wrapper video{
     height: 50%;
@@ -597,11 +646,11 @@ body{
     font-size: 10px;
   }
  
-  .navbar, .navbar-with-bg{
+  .vivid-navbar, .vivid-navbar-with-bg{
     width: 100%;
   }
 
-  .navbar a, .navbar-with-bg a{
+  .vivid-navbar a, .vivid-navbar-with-bg a{
   font-size: 12px;}
 
   .menu .container-fluid img{
@@ -609,10 +658,8 @@ body{
   }
 
   .viewable{
-   
-    width: 4rem;
-    height: 4rem;
-  
+    width: 3.5rem;
+    height: 3.5rem;
   }
 
   .viewable p{
@@ -621,25 +668,28 @@ body{
   .not-viewable p{
     font-size: 8px;
   }
-  
+
 
   .not-viewable{
-   
     width: 3rem;
     height: 3rem;
-
   }
 
   .modal-vid{
     height: 70%;
   }
 
-  
+  .menu{
+    min-height: 100vh;
+    position: absolute;
+    width: 90%;
+    left: 47%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    border-radius: 2rem;
+  }
 
-  
 
-  
-  
 }
 
 @media screen and (max-width: 568px){
@@ -677,18 +727,38 @@ body{
     bottom: 5rem;
   }
 
+  .menu{
+    min-height: 100vh;
+    position: absolute;
+    width: 90%;
+    left: 47%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 2rem;
+  }
+
   
 
 }
 
 @media  screen and (max-width: 425px) {
-  .navbar a, .navbar-with-bg a{
+  .vivid-navbar a, .vivid-navbar-with-bg a{
     font-size: 10px;
     margin: 0 10px;
   }
 
-  .navbar-with-bg{
+  .vivid-navbar-with-bg{
     height: 5rem;
+  }
+
+  .menu{
+    min-height: 100vh;
+    position: absolute;
+    width: 90%;
+    left: 47%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    border-radius: 2rem;
   }
 
   

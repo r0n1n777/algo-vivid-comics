@@ -4,10 +4,24 @@ const Navbar2 = ({ disabledVivid, setPageToShow, pageToShow }) => {
       <nav
         className={
           pageToShow == 1 || pageToShow == 2
-            ? "navbar-with-bg w-100 p-0 d-flex justify-content-center align-items-center"
-            : "navbar p-0 d-flex justify-content-center align-items-center"
+            ? "vivid-navbar-with-bg w-100 p-0 d-flex justify-content-center align-items-center"
+            : "vivid-navbar p-0 d-flex justify-content-center align-items-center"
         }
       >
+        <div
+          className={`view-now-2-wrapper ${
+            pageToShow == 1 || pageToShow == 2 ? "d-none" : ""
+          }`}
+        >
+          <div className="view-now-2 mx-4 d-flex justify-content-center align-items-center">
+            <p className="mb-0 text-white">View Now.</p>
+            <img
+              className="view-now-2-tail"
+              src={"./Assets/view-now-tail.png"}
+              alt=""
+            />
+          </div>
+        </div>
         <div className="row w-100">
           <div className="col-4 d-flex justify-content-center align-items-center">
             <a className="nav-item nav-link client-name text-nowrap" href="/">
