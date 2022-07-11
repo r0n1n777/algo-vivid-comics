@@ -1,6 +1,12 @@
 import { AnimatePresence, motion } from "framer-motion";
 
-const Modal = ({ setShowModal, vidInModal, showModal }) => {
+const Modal = ({
+  setShowModal,
+  vidInModal,
+  showModal,
+  handlePlay,
+  currentVid,
+}) => {
   const modalVariant = {
     visible: { opacity: 1, y: 0 },
     hidden: { opacity: 0, y: -200 },
@@ -20,13 +26,13 @@ const Modal = ({ setShowModal, vidInModal, showModal }) => {
             y: { type: "spring", stiffness: 200, bounce: 0.5 },
           }}
         >
-          <div className="modal-wrapper container d-flex justify-content-center align-items-center">
-            <img
-              src="./Assets/close-btn.png"
-              alt=""
-              width="60px"
-              onClick={() => setShowModal(false)}
-            />
+          <div
+            onClick={() => {
+              setShowModal(false);
+              handlePlay(currentVid);
+            }}
+            className="modal-wrapper container d-flex justify-content-center align-items-center"
+          >
             <video
               poster={"./Assets/loading.gif"}
               src={vidInModal}

@@ -1,6 +1,6 @@
 import Menu2 from "./menu2";
 import Pagination from "./pagination";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import Navbar2 from "./navbar2";
 import { useNavigate } from "react-router-dom";
@@ -22,6 +22,17 @@ const Vivid = ({
   vidInModal,
   setVidInModal,
 }) => {
+  const [currentVid, setCurrentVid] = useState(null);
+
+  const handlePause = (vid) => {
+    vid.pause();
+    setCurrentVid(vid);
+  };
+
+  const handlePlay = (vid) => {
+    vid.play();
+  };
+
   const navigate = useNavigate();
 
   const pagination = (
@@ -63,6 +74,8 @@ const Vivid = ({
 
   const modal = (
     <Modal
+      handlePlay={handlePlay}
+      currentVid={currentVid}
       setShowModal={setShowModal}
       vidInModal={vidInModal}
       showModal={showModal}
@@ -86,8 +99,6 @@ const Vivid = ({
       setShowPagination(false);
     }
   });
-
-  console.log(showPagination);
 
   switch (currentPage) {
     case 0:
@@ -217,6 +228,7 @@ const Vivid = ({
               onClick={() => {
                 setVidInModal("./Assets/Page 2Panel2_1.mp4");
                 setShowModal(true);
+                handlePause(vid2.current);
               }}
             ></div>
             <div
@@ -224,6 +236,7 @@ const Vivid = ({
               onClick={() => {
                 setVidInModal("./Assets/Page 2Panel 1.mp4");
                 setShowModal(true);
+                handlePause(vid2.current);
               }}
             ></div>
             <div
@@ -231,6 +244,7 @@ const Vivid = ({
               onClick={() => {
                 setVidInModal("./Assets/Page 2Panel3_1.mp4");
                 setShowModal(true);
+                handlePause(vid2.current);
               }}
             ></div>
             <div
@@ -238,6 +252,7 @@ const Vivid = ({
               onClick={() => {
                 setVidInModal("./Assets/Page 2Panel2.mp4");
                 setShowModal(true);
+                handlePause(vid2.current);
               }}
             ></div>
             <div
@@ -245,6 +260,7 @@ const Vivid = ({
               onClick={() => {
                 setVidInModal("./Assets/Page 2Panel 5_1.mp4");
                 setShowModal(true);
+                handlePause(vid2.current);
               }}
             ></div>
             <video
@@ -284,6 +300,7 @@ const Vivid = ({
               onClick={() => {
                 setVidInModal("./Assets/Page 3 Panel 1.mp4");
                 setShowModal(true);
+                handlePause(vid3.current);
               }}
               onEnded={() => {
                 setShowPagination(true);
@@ -308,6 +325,7 @@ const Vivid = ({
               onClick={() => {
                 setVidInModal("./Assets/Page 4 Panel 1 Compressed.mp4");
                 setShowModal(true);
+                handlePause(vid4.current);
               }}
             ></div>
             <video
@@ -365,6 +383,7 @@ const Vivid = ({
               onClick={() => {
                 setVidInModal("./Assets/Page6 Panel 1_compressed.mp4");
                 setShowModal(true);
+                handlePause(vid6.current);
               }}
             ></div>
             <div
@@ -372,6 +391,7 @@ const Vivid = ({
               onClick={() => {
                 setVidInModal("./Assets/Page6 Panel 2_compressed.mp4");
                 setShowModal(true);
+                handlePause(vid6.current);
               }}
             ></div>
             <div
@@ -379,6 +399,7 @@ const Vivid = ({
               onClick={() => {
                 setVidInModal("./Assets/Page6 Panel 3_compressed.mp4");
                 setShowModal(true);
+                handlePause(vid6.current);
               }}
             ></div>
             <div
@@ -386,6 +407,7 @@ const Vivid = ({
               onClick={() => {
                 setVidInModal("./Assets/Page6 Panel 4_compressed.mp4");
                 setShowModal(true);
+                handlePause(vid6.current);
               }}
             ></div>
             <div
@@ -393,6 +415,7 @@ const Vivid = ({
               onClick={() => {
                 setVidInModal("./Assets/Page6 Panel 5_compressed.mp4");
                 setShowModal(true);
+                handlePause(vid6.current);
               }}
             ></div>
             <video

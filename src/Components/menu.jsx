@@ -7,7 +7,7 @@ const Menu = ({ setCurrentPage }) => {
   const [panels] = useState([
     {
       id: 1,
-      pageNumber: "01",
+      pageNumber: "o1",
       imgLink: "Assets/Page1_q.png",
       badge: (
         <div className="viewable d-flex justify-content-center align-items-center text-nowrap">
@@ -19,7 +19,7 @@ const Menu = ({ setCurrentPage }) => {
     },
     {
       id: 2,
-      pageNumber: "02",
+      pageNumber: "o2",
       imgLink: "Assets/Page2_o.png",
       badge: (
         <div className="not-viewable d-flex justify-content-center align-items-center">
@@ -31,7 +31,7 @@ const Menu = ({ setCurrentPage }) => {
     },
     {
       id: 3,
-      pageNumber: "03",
+      pageNumber: "o3",
       imgLink: "Assets/Page3_p.png",
       badge: (
         <div className="not-viewable d-flex justify-content-center align-items-center">
@@ -43,7 +43,7 @@ const Menu = ({ setCurrentPage }) => {
     },
     {
       id: 4,
-      pageNumber: "04",
+      pageNumber: "o4",
       imgLink: "Assets/Page4_q.png",
       badge: (
         <div className="not-viewable d-flex justify-content-center align-items-center">
@@ -55,7 +55,7 @@ const Menu = ({ setCurrentPage }) => {
     },
     {
       id: 5,
-      pageNumber: "05",
+      pageNumber: "o5",
       imgLink: "Assets/Page5_r.png",
       badge: (
         <div className="not-viewable d-flex justify-content-center align-items-center">
@@ -67,7 +67,7 @@ const Menu = ({ setCurrentPage }) => {
     },
     {
       id: 6,
-      pageNumber: "06",
+      pageNumber: "o6",
       imgLink: "Assets/Page6_s.png",
       badge: (
         <div className="not-viewable d-flex justify-content-center align-items-center">
@@ -152,7 +152,7 @@ const Menu = ({ setCurrentPage }) => {
           <div className="col-6 my-3 d-flex justify-content-center align-items-center">
             <div className="page-wrapper">
               <div className="page-number d-flex justify-content-start align-items-center">
-                <h1 className="text-white">07</h1>
+                <h1 className="text-white">o7</h1>
                 <p className="mb-0">PAGE</p>
               </div>
               <div className="panel-wrapper">

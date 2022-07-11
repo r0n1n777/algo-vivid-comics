@@ -22,6 +22,11 @@ const Navbar2 = ({ disabledVivid, setPageToShow, pageToShow }) => {
             />
           </div>
         </div>
+        <div
+          className={`navbar-background ${
+            pageToShow == 0 ? "d-none d-md-block" : ""
+          }`}
+        ></div>
         <div className="row w-100">
           <div className="col-4 d-flex justify-content-center align-items-center">
             <a className="nav-item nav-link client-name text-nowrap" href="/">

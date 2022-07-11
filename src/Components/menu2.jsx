@@ -5,37 +5,37 @@ const Menu2 = ({ setCurrentPage, setShowPagination }) => {
   const [panels] = useState([
     {
       id: 1,
-      pageNumber: "01",
+      pageNumber: "o1",
       imgLink: "Assets/Page1_q.png",
       animate: { x: -100 },
     },
     {
       id: 2,
-      pageNumber: "02",
+      pageNumber: "o2",
       imgLink: "Assets/Page2_o.png",
       animate: { x: 100 },
     },
     {
       id: 3,
-      pageNumber: "03",
+      pageNumber: "o3",
       imgLink: "Assets/Page3_p.png",
       animate: { x: -100 },
     },
     {
       id: 4,
-      pageNumber: "04",
+      pageNumber: "o4",
       imgLink: "Assets/Page4_q.png",
       animate: { x: 100 },
     },
     {
       id: 5,
-      pageNumber: "05",
+      pageNumber: "o5",
       imgLink: "Assets/Page5_r.png",
       animate: { x: -100 },
     },
     {
       id: 6,
-      pageNumber: "06",
+      pageNumber: "o6",
       imgLink: "Assets/Page6_s.png",
       animate: { x: 100 },
     },
