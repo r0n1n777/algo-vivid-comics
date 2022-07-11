@@ -558,16 +558,11 @@ html{
   max-width: 100%;
   height: auto;
   background-color: black;
+  padding: 2rem;
  
 }
 
-.modal-wrapper img{
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-  z-index: 101;
-  cursor: pointer;
-}
+
 
 .navbar-background{
   position: absolute;
