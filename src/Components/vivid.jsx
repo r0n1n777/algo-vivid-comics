@@ -153,6 +153,7 @@ const Vivid = ({
     case 1:
       return (
         <div className="page">
+          {modal}
           {showPagination && scroll}
           {hamburger}
           {setEncircled(2)}
@@ -168,6 +169,11 @@ const Vivid = ({
               onEnded={() => {
                 vid1.current.play();
               }}
+              onClick={() => {
+                setVidInModal("./Assets/Page1-Panel1_Trim.mp4");
+                setShowModal(true);
+              }}
+              style={{ cursor: "pointer" }}
             >
               <source src={"./Assets/Page1-Panel1_Trim.mp4"} type="video/mp4" />
               Your browser does not support the video tag.
@@ -176,7 +182,14 @@ const Vivid = ({
               I'm not sure if I can still remember
             </p>
           </div>
-          <div className="tangled3-wrapper py-5 d-flex justify-content-center align-items-center flex-column">
+          <div
+            onClick={() => {
+              setVidInModal("./Assets/Page1-Panel2-compressed.mp4");
+              setShowModal(true);
+            }}
+            style={{ cursor: "pointer" }}
+            className="tangled3-wrapper py-5 d-flex justify-content-center align-items-center flex-column"
+          >
             <div className="door"></div>
             <video className="img-fluid page1-panel2" autoPlay muted loop>
               <source
@@ -196,7 +209,13 @@ const Vivid = ({
             <p className="text-white text-center px-3">
               or when I last took a glance of my own reflection
             </p>
-            <div className="cover-wrapper">
+            <div
+              className="cover-wrapper"
+              onClick={() => {
+                setVidInModal("./Assets/Page1-Panel2-compressed.mp4");
+                setShowModal(true);
+              }}
+            >
               <img
                 src={"./Assets/Panel 3 Page 1.jpg"}
                 className="img-fluid"
